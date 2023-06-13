@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('jwtAuth')->group(function () {
+    Route::get('/', function () {
+        //
+    });
 });
+
+# AUTH ROUTES
+Route::prefix('auth')->name('auth.')->group(function () {
+    Route::post('register', [AuthController::class, 'register'])->name('register');// user
+    Route::post('/login',  [AuthController::class, 'login']);
+    Route::post('/register', [AuthController::class, 'register']);
+    Route::get('/logout', [AuthController::class, 'logout'])->middleware("jwtAuth");
+    Route::post('/refresh', [AuthController::class, 'refresh'])->middleware("jwtAuth");
+    Route::get('/user-profile', [AuthController::class, 'userProfile'])->middleware("jwtAuth");
+});
+
+Route::fallback(static function () {
+    return response()->json(['message' => 'Route not found.'], Response::HTTP_NOT_FOUND);
+})->name('fallback');
