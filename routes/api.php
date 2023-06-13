@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('jwtAuth')->group(function () {
-    Route::get('/', function () {
-        //
-    });
+    Route::resource('categories', CategoryController::class)->except(['create', 'edit']);
 });
 
 # AUTH ROUTES
@@ -27,7 +26,7 @@ Route::prefix('auth')->name('auth.')->group(function () {
     Route::post('/login',  [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
     Route::get('/logout', [AuthController::class, 'logout'])->middleware("jwtAuth");
-    Route::post('/refresh', [AuthController::class, 'refresh'])->middleware("jwtAuth");
+    Route::get('/refresh', [AuthController::class, 'refresh'])->middleware("jwtAuth");
     Route::get('/user-profile', [AuthController::class, 'userProfile'])->middleware("jwtAuth");
 });
 
