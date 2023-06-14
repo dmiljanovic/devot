@@ -14,7 +14,7 @@ class CategoryRepository implements CrudInterface
 
     public function store(array $data): Category
     {
-        Category::create($data);
+        return Category::create($data);
     }
 
     public function getById(int $id): ?Category
@@ -22,9 +22,12 @@ class CategoryRepository implements CrudInterface
         return Category::find($id);
     }
 
-    public function delete(int $id): void
+    public function delete(int $id): Category
     {
-        Category::delete($id);
+        $category = Category::find($id);
+        $category->delete();
+
+        return $category;
     }
 
     public function update(array $data): void
