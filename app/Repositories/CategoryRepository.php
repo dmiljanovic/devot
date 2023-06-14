@@ -14,13 +14,7 @@ class CategoryRepository implements CrudInterface
         $query = Category::query();
 
         if ($request->has('name')) {
-            $query->where('category_id', $request->get('category'));
-        }
-        if ($request->has('date_from')) {
-            $query->where('created_at', '>=', Carbon::parse($request->get('date_from')));
-        }
-        if ($request->has('date_to')) {
-            $query->where('created_at', '>=', Carbon::parse($request->get('date_to')));
+            $query->where('name', 'like', '%' . $request->get('name') . '%');
         }
 
         return $query->paginate(2)->withQueryString();
