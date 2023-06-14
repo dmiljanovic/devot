@@ -9,6 +9,7 @@ use App\Http\Requests\Expense\StoreExpenseRequest;
 use App\Http\Requests\Expense\UpdateExpenseRequest;
 use App\Repositories\ExpenseRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -21,10 +22,10 @@ class ExpenseController extends Controller
         $this->expenseRepository = $expenseRepository;
     }
 
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         try {
-            $expenses = $this->expenseRepository->getAllWithPagination();
+            $expenses = $this->expenseRepository->getAllWithPagination($request);
         } catch (\Exception $e) {
             Log::error('Error while getting all expenses with pagination: ' . $e);
 

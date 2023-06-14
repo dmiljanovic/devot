@@ -3,13 +3,27 @@
 namespace App\Repositories;
 
 use App\Models\Category;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class CategoryRepository implements CrudInterface
 {
-    public function getAllWithPagination(): LengthAwarePaginator
+    public function getAllWithPagination(Request $request): LengthAwarePaginator
     {
-        return Category::paginate(2);
+        $query = Category::query();
+
+        if ($request->has('name')) {
+            $query->where('category_id', $request->get('category'));
+        }
+        if ($request->has('date_from')) {
+            $query->where('created_at', '>=', Carbon::parse($request->get('date_from')));
+        }
+        if ($request->has('date_to')) {
+            $query->where('created_at', '>=', Carbon::parse($request->get('date_to')));
+        }
+
+        return $query->paginate(2)->withQueryString();
     }
 
     public function store(array $data): Category

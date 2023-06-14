@@ -3,13 +3,33 @@
 namespace App\Repositories;
 
 use App\Models\Expense;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class ExpenseRepository implements CrudInterface
 {
-    public function getAllWithPagination(): LengthAwarePaginator
+    public function getAllWithPagination(Request $request): LengthAwarePaginator
     {
-        return Expense::paginate(2);
+        $query = Expense::query();
+
+        if ($request->has('category')) {
+            $query->where('category_id', $request->get('category'));
+        }
+        if ($request->has('price_min')) {
+            $query->where('amount', '>=', $request->get('price_min'));
+        }
+        if ($request->has('price_max')) {
+            $query->where('amount', '<=', $request->get('price_max'));
+        }
+        if ($request->has('date_from')) {
+            $query->where('created_at', '>=', Carbon::parse($request->get('date_from')));
+        }
+        if ($request->has('date_to')) {
+            $query->where('created_at', '>=', Carbon::parse($request->get('date_to')));
+        }
+
+        return $query->paginate(2)->withQueryString();
     }
 
     public function store(array $data): Expense
