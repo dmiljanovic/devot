@@ -22,9 +22,12 @@ class ExpenseRepository implements CrudInterface
         return Expense::find($id);
     }
 
-    public function delete(int $id): void
+    public function delete(int $id): Expense
     {
-        Expense::delete($id);
+        $expense = Expense::find($id);
+        $expense->delete();
+
+        return $expense;
     }
 
     public function update(array $data): void

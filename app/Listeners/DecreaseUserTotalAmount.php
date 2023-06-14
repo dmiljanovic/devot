@@ -2,12 +2,10 @@
 
 namespace App\Listeners;
 
-use App\Events\ExpenseCreated;
+use App\Events\ExpenseDeleted;
 use App\Repositories\UserRepository;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
-class CalculateUserTotalAmount
+class DecreaseUserTotalAmount
 {
     private UserRepository $userRepository;
 
@@ -24,11 +22,11 @@ class CalculateUserTotalAmount
     /**
      * Handle the event.
      *
-     * @param  \App\Events\ExpenseCreated  $event
+     * @param ExpenseDeleted $event
      * @return void
      */
-    public function handle(ExpenseCreated $event)
+    public function handle(ExpenseDeleted $event): void
     {
-        $this->userRepository->updateAmount($event->expense);
+        $this->userRepository->decreaseTotalAmount($event->expense);
     }
 }

@@ -13,7 +13,7 @@ interface CrudInterface
 
     public function getById(int $id): ?Model;
 
-    public function delete(int $id): void;
+    public function delete(int $id): Model;
 
     public function update(array $data): void;
 }

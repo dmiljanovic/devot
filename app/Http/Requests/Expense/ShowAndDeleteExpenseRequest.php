@@ -2,10 +2,13 @@
 
 namespace App\Http\Requests\Expense;
 
+use App\Traits\RequestQueryParams;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ShowAndDeleteExpenseRequest extends FormRequest
 {
+    use RequestQueryParams;
+
     /**
      * Determine if the user is authorized to make this request.
      *

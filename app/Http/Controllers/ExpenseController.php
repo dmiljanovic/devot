@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\ExpenseCreated;
+use App\Events\ExpenseDeleted;
 use App\Http\Requests\Expense\ShowAndDeleteExpenseRequest;
 use App\Http\Requests\Expense\StoreExpenseRequest;
 use App\Http\Requests\Expense\UpdateExpenseRequest;
@@ -41,7 +42,6 @@ class ExpenseController extends Controller
 
         try {
             $expense = $this->expenseRepository->store($data);
-
             ExpenseCreated::dispatch($expense);
         } catch (\Exception $e) {
             Log::error('Error while storing expense: ' . $e);
@@ -86,8 +86,8 @@ class ExpenseController extends Controller
         DB::beginTransaction();
 
         try {
-            $this->expenseRepository->delete($request->get('expense'));
-            //TODO revert calculation for user total amount.
+            $expense = $this->expenseRepository->delete($request->get('expense'));
+            ExpenseDeleted::dispatch($expense);
         } catch (\Exception $e) {
             Log::error('Error while deleting category: ' . $e);
             DB::rollBack();
