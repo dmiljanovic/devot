@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\ExpenseCreated;
+use App\Events\ExpenseDeleted;
 use App\Repositories\UserRepository;
 
 class IncreaseUserTotalAmount
@@ -22,10 +22,10 @@ class IncreaseUserTotalAmount
     /**
      * Handle the event.
      *
-     * @param ExpenseCreated $event
+     * @param ExpenseDeleted $event
      * @return void
      */
-    public function handle(ExpenseCreated $event): void
+    public function handle(ExpenseDeleted $event): void
     {
         $this->userRepository->increaseTotalAmount($event->expense);
     }

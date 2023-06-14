@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\ExpenseDeleted;
+use App\Events\ExpenseCreated;
 use App\Repositories\UserRepository;
 
 class DecreaseUserTotalAmount
@@ -22,10 +22,10 @@ class DecreaseUserTotalAmount
     /**
      * Handle the event.
      *
-     * @param ExpenseDeleted $event
+     * @param ExpenseCreated $event
      * @return void
      */
-    public function handle(ExpenseDeleted $event): void
+    public function handle(ExpenseCreated $event): void
     {
         $this->userRepository->decreaseTotalAmount($event->expense);
     }
