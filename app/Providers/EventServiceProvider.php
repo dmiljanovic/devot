@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\ExpenseCreated;
+use App\Events\ExpenseDeleted;
+use App\Listeners\CalculateUserTotalAmount;
+use App\Listeners\RevertCalculationUserTotalAmount;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -17,6 +21,12 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        ExpenseCreated::class => [
+            CalculateUserTotalAmount::class,
+        ],
+        ExpenseDeleted::class => [
+            RevertCalculationUserTotalAmount::class,
         ],
     ];
 

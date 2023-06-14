@@ -5,14 +5,14 @@ namespace App\Repositories;
 use App\Models\Category;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class CategoryRepository
+class CategoryRepository implements CrudInterface
 {
     public function getAllWithPagination(): LengthAwarePaginator
     {
         return Category::paginate(2);
     }
 
-    public function store(array $data): void
+    public function store(array $data): Category
     {
         Category::create($data);
     }

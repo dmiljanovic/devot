@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ExpenseController;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('jwtAuth')->group(function () {
     Route::resource('categories', CategoryController::class)->except(['create', 'edit']);
+    Route::resource('expenses', ExpenseController::class)->except(['create', 'edit']);
 });
 
 # AUTH ROUTES

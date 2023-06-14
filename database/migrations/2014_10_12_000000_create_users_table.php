@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->decimal('total_amount', 10, 2)->default(10000000.00);
             $table->timestamps();
         });
     }

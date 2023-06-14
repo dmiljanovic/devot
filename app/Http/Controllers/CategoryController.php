@@ -41,7 +41,7 @@ class CategoryController extends Controller
             return response()->json('Error while storing category.', 500);
         }
 
-        return response()->json('Category Successfully stored.');
+        return response()->json('Category successfully stored.');
     }
 
     public function show(ShowAndDeleteCategoryRequest $request): JsonResponse
