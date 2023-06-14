@@ -24,7 +24,6 @@ class StoreExpenseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => 'required|exists:expenses,id',
             'category_id' => 'required|exists:categories,id',
             'description' => 'required|string|min:8|max:256',
             'amount' => 'required|decimal:2',

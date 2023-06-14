@@ -6,7 +6,6 @@ use App\Events\ExpenseCreated;
 use App\Http\Requests\Expense\ShowAndDeleteExpenseRequest;
 use App\Http\Requests\Expense\StoreExpenseRequest;
 use App\Http\Requests\Expense\UpdateExpenseRequest;
-use App\Models\Expense;
 use App\Repositories\ExpenseRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
@@ -36,10 +35,12 @@ class ExpenseController extends Controller
 
     public function store(StoreExpenseRequest $request): JsonResponse
     {
+        $data = array_merge($request->validated(), ['user_id' => $request->user()->id]);
+
         DB::beginTransaction();
 
         try {
-            $expense = $this->expenseRepository->store($request->validated());
+            $expense = $this->expenseRepository->store($data);
 
             ExpenseCreated::dispatch($expense);
         } catch (\Exception $e) {
