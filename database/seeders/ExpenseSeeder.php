@@ -26,6 +26,7 @@ class ExpenseSeeder extends Seeder
                 'category_id' => $category->id,
                 'description' => 'Test description...',
                 'amount' => random_int(1, 10000),
+                'created_at' => now()
             ]);
         }
     }

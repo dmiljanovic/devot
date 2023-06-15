@@ -67,7 +67,7 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => JWTAuth::factory()->setTTL(60),
+            'expires_in' => now()->addMinutes(60),
             'user' => auth()->user()
         ]);
     }
