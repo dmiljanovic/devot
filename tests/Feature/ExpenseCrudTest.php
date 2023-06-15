@@ -59,7 +59,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_users_can_update_a_expense(): void
+    public function a_users_can_update_an_expense(): void
     {
         $response = $this->put(
             '/api/expenses/' . $this->expense->id . '?token=' . $this->token,
@@ -70,7 +70,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_users_can_delete_a_expense(): void
+    public function a_users_can_delete_an_expense(): void
     {
         $response = $this->delete('/api/expenses/' . $this->expense->id . '?token=' . $this->token);
 
