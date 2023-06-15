@@ -1,0 +1,52 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/{fallbackPlaceholder}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      fallbackPlaceholder:
+        name: fallbackPlaceholder
+        description: ''
+        required: true
+        example: v~Z
+        type: string
+        custom: []
+    cleanUrlParameters:
+      fallbackPlaceholder: v~Z
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"Route not found."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
