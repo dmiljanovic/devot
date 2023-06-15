@@ -7,7 +7,6 @@ use App\Models\Expense;
 use App\Models\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ExpenseCrudTest extends TestCase
 {
@@ -21,7 +20,7 @@ class ExpenseCrudTest extends TestCase
         parent::setUp();
 
         $user = User::factory()->create();
-        $this->token = JWTAuth::fromUser($user);
+        $this->actingAs($user);
         $this->expense = Expense::factory()
             ->for(User::factory()->create())
             ->for(Category::factory()->create())
@@ -31,16 +30,16 @@ class ExpenseCrudTest extends TestCase
     /** @test */
     public function a_user_can_read_all_the_expenses(): void
     {
-        $response = $this->get('/api/expenses?token=' . $this->token);
+        $response = $this->get('/api/expenses');
 
         $response->assertSee($this->expense->description);
-        $this->assertEquals(1,Category::all()->count());
+        $this->assertEquals(1,Expense::all()->count());
     }
 
     /** @test */
     public function a_user_can_read_single_expense(): void
     {
-        $response = $this->get('/api/expenses/' . $this->expense->id . '?token=' . $this->token);
+        $response = $this->get('/api/expenses/' . $this->expense->id);
 
         $response->assertSee($this->expense->description)->assertSee($this->expense->id);
     }
@@ -53,7 +52,7 @@ class ExpenseCrudTest extends TestCase
             ->for(Category::factory()->create())
             ->make();
 
-        $response = $this->post('/api/expenses?token=' . $this->token, $expense->toArray());
+        $response = $this->post('/api/expenses', $expense->toArray());
 
         $response->assertSee('Expense successfully stored.');
     }
@@ -62,7 +61,7 @@ class ExpenseCrudTest extends TestCase
     public function a_users_can_update_an_expense(): void
     {
         $response = $this->put(
-            '/api/expenses/' . $this->expense->id . '?token=' . $this->token,
+            '/api/expenses/' . $this->expense->id,
             ['description' => 'updated']
         );
 
@@ -72,8 +71,9 @@ class ExpenseCrudTest extends TestCase
     /** @test */
     public function a_users_can_delete_an_expense(): void
     {
-        $response = $this->delete('/api/expenses/' . $this->expense->id . '?token=' . $this->token);
+        $response = $this->delete('/api/expenses/' . $this->expense->id);
 
         $response->assertSee('Expense successfully deleted.');
+        $this->assertEquals(0,Expense::all()->count());
     }
 }
