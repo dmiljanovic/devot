@@ -1,20 +1,122 @@
-name: Authentication
+name: 'Expense CRUD'
 description: |-
 
-  API endpoints for managing authentication
+  API endpoints for managing Expense CRUD operations
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/auth/register
+      - GET
+    uri: api/expenses
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Register a User.'
+      title: 'Get all expenses with pagination'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {"current_page": 1,
+           "data": [
+           {
+             "id": 1,
+             "user_id": 1,
+             "category_id": 1,
+             "description": "Test description...",
+             "amount": "196.00",
+             "created_at": "2023-06-15T12:03:40.000000Z",
+             "updated_at": null
+            },
+            {
+             "id": 2,
+             "user_id": 1,
+             "category_id": 2,
+             "description": "Test description...",
+             "amount": "4893.00",
+             "created_at": "2023-06-15T12:03:40.000000Z",
+             "updated_at": null
+            }
+           ],
+           "first_page_url": "http://devot.test/api/expenses?page=1",
+           "from": 1,
+           "last_page": 4,
+           "last_page_url": "http://devot.test/api/expenses?page=4",
+           "links": [
+            {
+             "url": null,
+             "label": "&laquo; Previous",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=1",
+             "label": "1",
+             "active": true
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=2",
+             "label": "2",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=3",
+             "label": "3",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=4",
+             "label": "4",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=2",
+             "label": "Next &raquo;",
+             "active": false
+            }
+           ],
+           "next_page_url": "http://devot.test/api/expenses?page=2",
+           "path": "http://devot.test/api/expenses",
+           "per_page": 2,
+           "prev_page_url": null,
+           "to": 2,
+           "total": 7
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/expenses
+    metadata:
+      groupName: 'Expense CRUD'
+      groupDescription: |-
+
+        API endpoints for managing Expense CRUD operations
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store new expense.'
       description: ''
       authenticated: false
       custom: []
@@ -26,46 +128,102 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must be between 2 and 100 characters.'
+      category_id:
+        name: category_id
+        description: ''
         required: true
-        example: ae
+        example: cumque
         type: string
         custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 100 characters.'
+      description:
+        name: description
+        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: true
-        example: kayleigh.dibbert@example.org
+        example: 'Minus doloribus rerum sed.'
         type: string
         custom: []
-      password:
-        name: password
-        description: 'Must be at least 4 characters.'
+      amount:
+        name: amount
+        description: ''
         required: true
-        example: '8.Z>7y?%D'
+        example: deleniti
         type: string
         custom: []
     cleanBodyParameters:
-      name: ae
-      email: kayleigh.dibbert@example.org
-      password: '8.Z>7y?%D'
+      category_id: cumque
+      description: 'Minus doloribus rerum sed.'
+      amount: deleniti
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "message": "User successfully registered",
-           "user": {
-            "name": "Test",
-            "email": "test1@test.com",
-            "updated_at": "2023-06-15T12:04:26.000000Z",
-            "created_at": "2023-06-15T12:04:26.000000Z",
-            "id": 2
+           "message": "Expense successfully stored.",
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/expenses/{id}'
+    metadata:
+      groupName: 'Expense CRUD'
+      groupDescription: |-
+
+        API endpoints for managing Expense CRUD operations
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show single expense.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: sint
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: sint
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      expense:
+        name: expense
+        description: ''
+        required: true
+        example: cupiditate
+        type: string
+        custom: []
+    cleanBodyParameters:
+      expense: cupiditate
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "id": 2,
+            "user_id": 1,
+            "category_id": 2,
+            "description": "Test description...",
+            "amount": "4893.00",
+            "created_at": "2023-06-15T12:03:40.000000Z",
+            "updated_at": null
            }
-          }
         headers: []
         description: ''
         custom: []
@@ -77,62 +235,124 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - POST
-    uri: api/auth/login
+      - PUT
+      - PATCH
+    uri: 'api/expenses/{id}'
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get a JWT via given credentials.'
+      title: 'Update an expense.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: non
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: non
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      email:
-        name: email
-        description: 'The email of the  user.'
+      expense:
+        name: expense
+        description: ''
         required: true
-        example: testuser@example.com
+        example: quae
         type: string
         custom: []
-      password:
-        name: password
-        description: 'The password of the  user.'
-        required: true
-        example: secret
+      category_id:
+        name: category_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
+        required: false
+        example: 'In temporibus quibusdam aliquam rerum quos nihil sequi id.'
         type: string
         custom: []
     cleanBodyParameters:
-      email: testuser@example.com
-      password: secret
+      expense: quae
+      description: 'In temporibus quibusdam aliquam rerum quos nihil sequi id.'
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "access_token": "eyJ0eXA...",
-           "token_type": "Bearer",
-           "expires_in": "2023-06-15T12:39:21.898199Z",
-            "user": {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
+           "message": "Expense successfully updated.",
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/expenses/{id}'
+    metadata:
+      groupName: 'Expense CRUD'
+      groupDescription: |-
 
+        API endpoints for managing Expense CRUD operations
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete an expense.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: aut
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: aut
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      expense:
+        name: expense
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+    cleanBodyParameters:
+      expense: et
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "message": "Expense successfully deleted.",
           }
         headers: []
         description: ''
@@ -146,133 +366,51 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/auth/logout
+    uri: 'api/expenses/aggregate/{term}'
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Log the user out.'
+      title: 'Get aggregate expenses.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-           "message": "User successfully signed out"
-          }
-        headers: []
+    urlParameters:
+      term:
+        name: term
         description: ''
+        required: true
+        example: sequi
+        type: string
         custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/auth/refresh
-    metadata:
-      groupName: Authentication
-      groupDescription: |-
-
-        API endpoints for managing authentication
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Refresh a token.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    cleanUrlParameters:
+      term: sequi
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      term:
+        name: term
+        description: 'Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>.'
+        required: true
+        example: last_month
+        type: string
+        custom: []
+    cleanBodyParameters:
+      term: last_month
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "access_token": "eyJ0eXA...",
-           "token_type": "Bearer",
-           "expires_in": "2023-06-15T12:39:21.898199Z",
-            "user": {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
-
+           "34602.00",
           }
-        headers: []
-        description: ''
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/auth/user-profile
-    metadata:
-      groupName: Authentication
-      groupDescription: |-
-
-        API endpoints for managing authentication
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get the authenticated User.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
         headers: []
         description: ''
         custom: []

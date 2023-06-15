@@ -14,6 +14,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
+/**
+ * @group Expense CRUD
+ *
+ * API endpoints for managing Expense CRUD operations
+ */
 class ExpenseController extends Controller
 {
     private ExpenseRepository $expenseRepository;
@@ -23,6 +28,74 @@ class ExpenseController extends Controller
         $this->expenseRepository = $expenseRepository;
     }
 
+    /**
+     * Get all expenses with pagination
+     *
+     * @response {"current_page": 1,
+     *  "data": [
+     *  {
+     *    "id": 1,
+     *    "user_id": 1,
+     *    "category_id": 1,
+     *    "description": "Test description...",
+     *    "amount": "196.00",
+     *    "created_at": "2023-06-15T12:03:40.000000Z",
+     *    "updated_at": null
+     *   },
+     *   {
+     *    "id": 2,
+     *    "user_id": 1,
+     *    "category_id": 2,
+     *    "description": "Test description...",
+     *    "amount": "4893.00",
+     *    "created_at": "2023-06-15T12:03:40.000000Z",
+     *    "updated_at": null
+     *   }
+     *  ],
+     *  "first_page_url": "http://devot.test/api/expenses?page=1",
+     *  "from": 1,
+     *  "last_page": 4,
+     *  "last_page_url": "http://devot.test/api/expenses?page=4",
+     *  "links": [
+     *   {
+     *    "url": null,
+     *    "label": "&laquo; Previous",
+     *    "active": false
+     *   },
+     *   {
+     *    "url": "http://devot.test/api/expenses?page=1",
+     *    "label": "1",
+     *    "active": true
+     *   },
+     *   {
+     *    "url": "http://devot.test/api/expenses?page=2",
+     *    "label": "2",
+     *    "active": false
+     *   },
+     *   {
+     *    "url": "http://devot.test/api/expenses?page=3",
+     *    "label": "3",
+     *    "active": false
+     *   },
+     *   {
+     *    "url": "http://devot.test/api/expenses?page=4",
+     *    "label": "4",
+     *    "active": false
+     *   },
+     *   {
+     *    "url": "http://devot.test/api/expenses?page=2",
+     *    "label": "Next &raquo;",
+     *    "active": false
+     *   }
+     *  ],
+     *  "next_page_url": "http://devot.test/api/expenses?page=2",
+     *  "path": "http://devot.test/api/expenses",
+     *  "per_page": 2,
+     *  "prev_page_url": null,
+     *  "to": 2,
+     *  "total": 7
+     * }
+     */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -36,6 +109,13 @@ class ExpenseController extends Controller
         return response()->json($expenses);
     }
 
+    /**
+     * Store new expense.
+     *
+     * @response {
+     *  "message": "Expense successfully stored.",
+     * }
+     */
     public function store(StoreExpenseRequest $request): JsonResponse
     {
         $data = array_merge($request->validated(), ['user_id' => $request->user()->id]);
@@ -57,6 +137,19 @@ class ExpenseController extends Controller
         return response()->json('Expense successfully stored.');
     }
 
+    /**
+     * Show single expense.
+     *
+     * @response {
+     *   "id": 2,
+     *   "user_id": 1,
+     *   "category_id": 2,
+     *   "description": "Test description...",
+     *   "amount": "4893.00",
+     *   "created_at": "2023-06-15T12:03:40.000000Z",
+     *   "updated_at": null
+     *  }
+     */
     public function show(ShowAndDeleteExpenseRequest $request): JsonResponse
     {
         try {
@@ -70,6 +163,13 @@ class ExpenseController extends Controller
         return response()->json($expense);
     }
 
+    /**
+     * Update an expense.
+     *
+     * @response {
+     *  "message": "Expense successfully updated.",
+     * }
+     */
     public function update(UpdateExpenseRequest $request): JsonResponse
     {
         try {
@@ -83,6 +183,13 @@ class ExpenseController extends Controller
         return response()->json('Expense successfully updated.');
     }
 
+    /**
+     * Delete an expense.
+     *
+     * @response {
+     *  "message": "Expense successfully deleted.",
+     * }
+     */
     public function destroy(ShowAndDeleteExpenseRequest $request): JsonResponse
     {
         DB::beginTransaction();
@@ -102,6 +209,14 @@ class ExpenseController extends Controller
         return response()->json('Expense successfully deleted.');
     }
 
+
+    /**
+     * Get aggregate expenses.
+     *
+     * @response {
+     *  "34602.00",
+     * }
+     */
     public function aggregate(AggregateExpenseRequest $request): JsonResponse
     {
         try {

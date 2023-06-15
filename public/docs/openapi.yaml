@@ -62,15 +62,15 @@ paths:
                 name:
                   type: string
                   description: 'Must be between 2 and 100 characters.'
-                  example: irn
+                  example: crr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 100 characters.'
-                  example: michael.ankunding@example.org
+                  example: wuckert.virgil@example.net
                 password:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: 'PGR+4jU#DL~NV,@'
+                  example: '67u"_Kjod]#KCY@vB|'
               required:
                 - name
                 - email
@@ -143,11 +143,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: mjast@example.org
+                  example: dorothy.mayer@example.com
                 password:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: 'AQ&p))?BMprW-'
+                  example: aUW=vL0co2I_lsE
               required:
                 - email
                 - password
@@ -459,7 +459,7 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: gawsrtclrorjogjeytbudsabuhtbpnpicwqllwwiwsunhmbvlecwqfiqfbphzqhpsokecut
+                  example: flnmtel
               required:
                 - name
       security: []
@@ -506,7 +506,7 @@ paths:
                 category:
                   type: string
                   description: ''
-                  example: optio
+                  example: aspernatur
               required:
                 - category
       security: []
@@ -539,7 +539,7 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: neyujkzhplbddjmdbocbsfjywwtwsltyyrbetghmznqknzahsuhwkbyexirbzcwttnqshmvfj
+                  example: okgwaqcijagceanyqxqlomxpejjybvvhsulrhgildc
               required:
                 - category
                 - name
@@ -569,7 +569,7 @@ paths:
                 category:
                   type: string
                   description: ''
-                  example: et
+                  example: sed
               required:
                 - category
       security: []
@@ -578,770 +578,242 @@ paths:
         in: path
         name: id
         description: 'The ID of the category.'
-        example: quas
+        example: omnis
         required: true
         schema:
           type: string
-  /api/expenses:
+  '/api/{fallbackPlaceholder}':
     get:
       summary: ''
-      operationId: getApiExpenses
+      operationId: getApiFallbackPlaceholder
       description: ''
       parameters: []
       responses:
-        500:
+        404:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception: Exception
-                  file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line: 73
-                  trace:
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                      line: 43
-                      function: createResource
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                      line: 101
-                      function: __construct
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                      line: 319
-                      function: add
-                      class: Illuminate\Cache\FileStore
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                      line: 118
-                      function: add
-                      class: Illuminate\Cache\Repository
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 123
-                      function: hit
-                      class: Illuminate\Cache\RateLimiter
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 102
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 54
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 799
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 776
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 740
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 729
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 190
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 165
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 134
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 92
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 209
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 166
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 124
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 71
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 49
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 51
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 661
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 183
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 153
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 1063
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 155
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  message: 'Route not found.'
                 properties:
                   message:
                     type: string
-                    example: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception:
-                    type: string
-                    example: Exception
-                  file:
-                    type: string
-                    example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line:
-                    type: integer
-                    example: 73
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line: 43
-                        function: createResource
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                        line: 101
-                        function: __construct
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                        line: 319
-                        function: add
-                        class: Illuminate\Cache\FileStore
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                        line: 118
-                        function: add
-                        class: Illuminate\Cache\Repository
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 123
-                        function: hit
-                        class: Illuminate\Cache\RateLimiter
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 102
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 54
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 799
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 776
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 740
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 729
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 190
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 165
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 134
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 92
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 209
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 166
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 124
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 71
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 49
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 51
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 661
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 183
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 153
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 1063
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 155
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line:
-                          type: integer
-                          example: 43
-                        function:
-                          type: string
-                          example: createResource
-                        class:
-                          type: string
-                          example: Illuminate\Filesystem\LockableFile
-                        type:
-                          type: string
-                          example: '->'
+                    example: 'Route not found.'
       tags:
         - Endpoints
       security: []
-    post:
-      summary: ''
-      operationId: postApiExpenses
+    parameters:
+      -
+        in: path
+        name: fallbackPlaceholder
+        description: ''
+        example: v~Z
+        required: true
+        schema:
+          type: string
+  /api/expenses:
+    get:
+      summary: 'Get all expenses with pagination'
+      operationId: getAllExpensesWithPagination
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  current_page: 1
+                  data:
+                    -
+                      id: 1
+                      user_id: 1
+                      category_id: 1
+                      description: 'Test description...'
+                      amount: '196.00'
+                      created_at: '2023-06-15T12:03:40.000000Z'
+                      updated_at: null
+                    -
+                      id: 2
+                      user_id: 1
+                      category_id: 2
+                      description: 'Test description...'
+                      amount: '4893.00'
+                      created_at: '2023-06-15T12:03:40.000000Z'
+                      updated_at: null
+                  first_page_url: 'http://devot.test/api/expenses?page=1'
+                  from: 1
+                  last_page: 4
+                  last_page_url: 'http://devot.test/api/expenses?page=4'
+                  links:
+                    -
+                      url: null
+                      label: '&laquo; Previous'
+                      active: false
+                    -
+                      url: 'http://devot.test/api/expenses?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: 'http://devot.test/api/expenses?page=2'
+                      label: '2'
+                      active: false
+                    -
+                      url: 'http://devot.test/api/expenses?page=3'
+                      label: '3'
+                      active: false
+                    -
+                      url: 'http://devot.test/api/expenses?page=4'
+                      label: '4'
+                      active: false
+                    -
+                      url: 'http://devot.test/api/expenses?page=2'
+                      label: 'Next &raquo;'
+                      active: false
+                  next_page_url: 'http://devot.test/api/expenses?page=2'
+                  path: 'http://devot.test/api/expenses'
+                  per_page: 2
+                  prev_page_url: null
+                  to: 2
+                  total: 7
+                properties:
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        user_id: 1
+                        category_id: 1
+                        description: 'Test description...'
+                        amount: '196.00'
+                        created_at: '2023-06-15T12:03:40.000000Z'
+                        updated_at: null
+                      -
+                        id: 2
+                        user_id: 1
+                        category_id: 2
+                        description: 'Test description...'
+                        amount: '4893.00'
+                        created_at: '2023-06-15T12:03:40.000000Z'
+                        updated_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        user_id:
+                          type: integer
+                          example: 1
+                        category_id:
+                          type: integer
+                          example: 1
+                        description:
+                          type: string
+                          example: 'Test description...'
+                        amount:
+                          type: string
+                          example: '196.00'
+                        created_at:
+                          type: string
+                          example: '2023-06-15T12:03:40.000000Z'
+                        updated_at:
+                          type: string
+                          example: null
+                  first_page_url:
+                    type: string
+                    example: 'http://devot.test/api/expenses?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 4
+                  last_page_url:
+                    type: string
+                    example: 'http://devot.test/api/expenses?page=4'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://devot.test/api/expenses?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://devot.test/api/expenses?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://devot.test/api/expenses?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://devot.test/api/expenses?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://devot.test/api/expenses?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: '&laquo; Previous'
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: 'http://devot.test/api/expenses?page=2'
+                  path:
+                    type: string
+                    example: 'http://devot.test/api/expenses'
+                  per_page:
+                    type: integer
+                    example: 2
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 2
+                  total:
+                    type: integer
+                    example: 7
       tags:
-        - Endpoints
+        - 'Expense CRUD'
+      security: []
+    post:
+      summary: 'Store new expense.'
+      operationId: storeNewExpense
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n \"message\": \"Expense successfully stored.\",\n}"
+      tags:
+        - 'Expense CRUD'
       requestBody:
         required: true
         content:
@@ -1352,15 +824,15 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: cumque
                 description:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
-                  example: 'Qui maxime et dolorem.'
+                  example: 'Minus doloribus rerum sed.'
                 amount:
                   type: string
                   description: ''
-                  example: omnis
+                  example: deleniti
               required:
                 - category_id
                 - description
@@ -1368,755 +840,49 @@ paths:
       security: []
   '/api/expenses/{id}':
     get:
-      summary: ''
-      operationId: getApiExpensesId
+      summary: 'Show single expense.'
+      operationId: showSingleExpense
       description: ''
       parameters: []
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception: Exception
-                  file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line: 73
-                  trace:
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                      line: 43
-                      function: createResource
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                      line: 101
-                      function: __construct
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                      line: 319
-                      function: add
-                      class: Illuminate\Cache\FileStore
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                      line: 118
-                      function: add
-                      class: Illuminate\Cache\Repository
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 123
-                      function: hit
-                      class: Illuminate\Cache\RateLimiter
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 102
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 54
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 799
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 776
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 740
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 729
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 190
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 165
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 134
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 92
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 209
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 166
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 124
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 71
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 49
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 51
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 661
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 183
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 153
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 1063
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 155
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  id: 2
+                  user_id: 1
+                  category_id: 2
+                  description: 'Test description...'
+                  amount: '4893.00'
+                  created_at: '2023-06-15T12:03:40.000000Z'
+                  updated_at: null
                 properties:
-                  message:
-                    type: string
-                    example: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception:
-                    type: string
-                    example: Exception
-                  file:
-                    type: string
-                    example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line:
+                  id:
                     type: integer
-                    example: 73
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line: 43
-                        function: createResource
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                        line: 101
-                        function: __construct
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                        line: 319
-                        function: add
-                        class: Illuminate\Cache\FileStore
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                        line: 118
-                        function: add
-                        class: Illuminate\Cache\Repository
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 123
-                        function: hit
-                        class: Illuminate\Cache\RateLimiter
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 102
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 54
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 799
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 776
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 740
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 729
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 190
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 165
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 134
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 92
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 209
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 166
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 124
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 71
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 49
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 51
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 661
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 183
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 153
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 1063
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 155
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line:
-                          type: integer
-                          example: 43
-                        function:
-                          type: string
-                          example: createResource
-                        class:
-                          type: string
-                          example: Illuminate\Filesystem\LockableFile
-                        type:
-                          type: string
-                          example: '->'
+                    example: 2
+                  user_id:
+                    type: integer
+                    example: 1
+                  category_id:
+                    type: integer
+                    example: 2
+                  description:
+                    type: string
+                    example: 'Test description...'
+                  amount:
+                    type: string
+                    example: '4893.00'
+                  created_at:
+                    type: string
+                    example: '2023-06-15T12:03:40.000000Z'
+                  updated_at:
+                    type: string
+                    example: null
       tags:
-        - Endpoints
+        - 'Expense CRUD'
       requestBody:
         required: true
         content:
@@ -2127,18 +893,25 @@ paths:
                 expense:
                   type: string
                   description: ''
-                  example: debitis
+                  example: cupiditate
               required:
                 - expense
       security: []
     put:
-      summary: ''
-      operationId: putApiExpensesId
+      summary: 'Update an expense.'
+      operationId: updateAnExpense
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n \"message\": \"Expense successfully updated.\",\n}"
       tags:
-        - Endpoints
+        - 'Expense CRUD'
       requestBody:
         required: true
         content:
@@ -2149,7 +922,7 @@ paths:
                 expense:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: quae
                 category_id:
                   type: string
                   description: ''
@@ -2157,18 +930,25 @@ paths:
                 description:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
-                  example: 'Alias labore totam quis voluptates.'
+                  example: 'In temporibus quibusdam aliquam rerum quos nihil sequi id.'
               required:
                 - expense
       security: []
     delete:
-      summary: ''
-      operationId: deleteApiExpensesId
+      summary: 'Delete an expense.'
+      operationId: deleteAnExpense
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n \"message\": \"Expense successfully deleted.\",\n}"
       tags:
-        - Endpoints
+        - 'Expense CRUD'
       requestBody:
         required: true
         content:
@@ -2179,7 +959,7 @@ paths:
                 expense:
                   type: string
                   description: ''
-                  example: atque
+                  example: et
               required:
                 - expense
       security: []
@@ -2188,761 +968,26 @@ paths:
         in: path
         name: id
         description: 'The ID of the expense.'
-        example: 1
+        example: sint
         required: true
         schema:
-          type: integer
+          type: string
   '/api/expenses/aggregate/{term}':
     get:
-      summary: ''
-      operationId: getApiExpensesAggregateTerm
+      summary: 'Get aggregate expenses.'
+      operationId: getAggregateExpenses
       description: ''
       parameters: []
       responses:
-        500:
+        200:
           description: ''
           content:
-            application/json:
+            text/plain:
               schema:
-                type: object
-                example:
-                  message: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception: Exception
-                  file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line: 73
-                  trace:
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                      line: 43
-                      function: createResource
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                      line: 101
-                      function: __construct
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                      line: 319
-                      function: add
-                      class: Illuminate\Cache\FileStore
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                      line: 118
-                      function: add
-                      class: Illuminate\Cache\Repository
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 123
-                      function: hit
-                      class: Illuminate\Cache\RateLimiter
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 102
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 54
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 799
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 776
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 740
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 729
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 190
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 165
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 134
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 92
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 209
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 166
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 124
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 71
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 49
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 51
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 661
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 183
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 153
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 1063
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 155
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
-                properties:
-                  message:
-                    type: string
-                    example: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception:
-                    type: string
-                    example: Exception
-                  file:
-                    type: string
-                    example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line:
-                    type: integer
-                    example: 73
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line: 43
-                        function: createResource
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                        line: 101
-                        function: __construct
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                        line: 319
-                        function: add
-                        class: Illuminate\Cache\FileStore
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                        line: 118
-                        function: add
-                        class: Illuminate\Cache\Repository
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 123
-                        function: hit
-                        class: Illuminate\Cache\RateLimiter
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 102
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 54
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 799
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 776
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 740
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 729
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 190
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 165
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 134
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 92
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 209
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 166
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 124
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 71
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 49
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 51
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 661
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 183
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 153
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 1063
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 155
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line:
-                          type: integer
-                          example: 43
-                        function:
-                          type: string
-                          example: createResource
-                        class:
-                          type: string
-                          example: Illuminate\Filesystem\LockableFile
-                        type:
-                          type: string
-                          example: '->'
+                type: string
+                example: "{\n \"34602.00\",\n}"
       tags:
-        - Endpoints
+        - 'Expense CRUD'
       requestBody:
         required: true
         content:
@@ -2962,768 +1007,7 @@ paths:
         in: path
         name: term
         description: ''
-        example: ut
-        required: true
-        schema:
-          type: string
-  '/api/{fallbackPlaceholder}':
-    get:
-      summary: ''
-      operationId: getApiFallbackPlaceholder
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception: Exception
-                  file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line: 73
-                  trace:
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                      line: 43
-                      function: createResource
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                      line: 101
-                      function: __construct
-                      class: Illuminate\Filesystem\LockableFile
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                      line: 319
-                      function: add
-                      class: Illuminate\Cache\FileStore
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                      line: 118
-                      function: add
-                      class: Illuminate\Cache\Repository
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 123
-                      function: hit
-                      class: Illuminate\Cache\RateLimiter
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 102
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                      line: 54
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 799
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 776
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 740
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 729
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 190
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 165
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 134
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 92
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 209
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 166
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 124
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 71
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 49
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 51
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 661
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 183
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 153
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 1063
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/symfony/console/Application.php
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 155
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/devot/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
-                properties:
-                  message:
-                    type: string
-                    example: 'Unable to create lockable file: /var/www/devot/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468. Please ensure you have permission to create files in this location.'
-                  exception:
-                    type: string
-                    example: Exception
-                  file:
-                    type: string
-                    example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                  line:
-                    type: integer
-                    example: 73
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line: 43
-                        function: createResource
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php
-                        line: 101
-                        function: __construct
-                        class: Illuminate\Filesystem\LockableFile
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/Repository.php
-                        line: 319
-                        function: add
-                        class: Illuminate\Cache\FileStore
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php
-                        line: 118
-                        function: add
-                        class: Illuminate\Cache\Repository
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 123
-                        function: hit
-                        class: Illuminate\Cache\RateLimiter
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 102
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
-                        line: 54
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 799
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 776
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 740
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 729
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 190
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 165
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 134
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 92
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 209
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 166
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 124
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 71
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 49
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 51
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 661
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 183
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Command/Command.php
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 153
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 1063
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/symfony/console/Application.php
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 155
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/devot/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: /var/www/devot/vendor/laravel/framework/src/Illuminate/Filesystem/LockableFile.php
-                        line:
-                          type: integer
-                          example: 43
-                        function:
-                          type: string
-                          example: createResource
-                        class:
-                          type: string
-                          example: Illuminate\Filesystem\LockableFile
-                        type:
-                          type: string
-                          example: '->'
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: fallbackPlaceholder
-        description: ''
-        example: ']w'
+        example: sequi
         required: true
         schema:
           type: string
@@ -3737,3 +1021,6 @@ tags:
   -
     name: Endpoints
     description: ''
+  -
+    name: 'Expense CRUD'
+    description: "\nAPI endpoints for managing Expense CRUD operations"

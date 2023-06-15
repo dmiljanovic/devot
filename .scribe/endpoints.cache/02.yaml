@@ -32,27 +32,27 @@ endpoints:
         name: name
         description: 'Must be between 2 and 100 characters.'
         required: true
-        example: irn
+        example: crr
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 100 characters.'
         required: true
-        example: michael.ankunding@example.org
+        example: wuckert.virgil@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: 'PGR+4jU#DL~NV,@'
+        example: '67u"_Kjod]#KCY@vB|'
         type: string
         custom: []
     cleanBodyParameters:
-      name: irn
-      email: michael.ankunding@example.org
-      password: 'PGR+4jU#DL~NV,@'
+      name: crr
+      email: wuckert.virgil@example.net
+      password: '67u"_Kjod]#KCY@vB|'
     fileParameters: []
     responses:
       -
@@ -104,19 +104,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: mjast@example.org
+        example: dorothy.mayer@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: 'AQ&p))?BMprW-'
+        example: aUW=vL0co2I_lsE
         type: string
         custom: []
     cleanBodyParameters:
-      email: mjast@example.org
-      password: 'AQ&p))?BMprW-'
+      email: dorothy.mayer@example.com
+      password: aUW=vL0co2I_lsE
     fileParameters: []
     responses:
       -

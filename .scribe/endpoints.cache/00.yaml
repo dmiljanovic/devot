@@ -128,11 +128,11 @@ endpoints:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: gawsrtclrorjogjeytbudsabuhtbpnpicwqllwwiwsunhmbvlecwqfiqfbphzqhpsokecut
+        example: flnmtel
         type: string
         custom: []
     cleanBodyParameters:
-      name: gawsrtclrorjogjeytbudsabuhtbpnpicwqllwwiwsunhmbvlecwqfiqfbphzqhpsokecut
+      name: flnmtel
     fileParameters: []
     responses:
       -
@@ -173,11 +173,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: quas
+        example: omnis
         type: string
         custom: []
     cleanUrlParameters:
-      id: quas
+      id: omnis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -185,11 +185,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: optio
+        example: aspernatur
         type: string
         custom: []
     cleanBodyParameters:
-      category: optio
+      category: aspernatur
     fileParameters: []
     responses:
       -
@@ -234,11 +234,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: exercitationem
+        example: quaerat
         type: string
         custom: []
     cleanUrlParameters:
-      id: exercitationem
+      id: quaerat
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -253,12 +253,12 @@ endpoints:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: neyujkzhplbddjmdbocbsfjywwtwsltyyrbetghmznqknzahsuhwkbyexirbzcwttnqshmvfj
+        example: okgwaqcijagceanyqxqlomxpejjybvvhsulrhgildc
         type: string
         custom: []
     cleanBodyParameters:
       category: quia
-      name: neyujkzhplbddjmdbocbsfjywwtwsltyyrbetghmznqknzahsuhwkbyexirbzcwttnqshmvfj
+      name: okgwaqcijagceanyqxqlomxpejjybvvhsulrhgildc
     fileParameters: []
     responses:
       -
@@ -299,11 +299,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: consequuntur
+        example: quis
         type: string
         custom: []
     cleanUrlParameters:
-      id: consequuntur
+      id: quis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -311,11 +311,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: et
+        example: sed
         type: string
         custom: []
     cleanBodyParameters:
-      category: et
+      category: sed
     fileParameters: []
     responses:
       -

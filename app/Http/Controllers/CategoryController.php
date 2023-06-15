@@ -10,7 +10,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
-
 /**
  * @group Category CRUD
  *
@@ -149,7 +148,6 @@ class CategoryController extends Controller
      * @response {
      *  "message": "Category successfully updated.",
      * }
-     *
      */
     public function update(UpdateCategoryRequest $request): JsonResponse
     {
