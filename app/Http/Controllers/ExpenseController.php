@@ -75,7 +75,7 @@ class ExpenseController extends Controller
         try {
             $this->expenseRepository->update($request->validated());
         } catch (\Exception $e) {
-            Log::error('Error while updating the category: ' . $e);
+            Log::error('Error while updating the expense: ' . $e);
 
             return response()->json('Error while updating the expense.', 500);
         }
@@ -91,7 +91,7 @@ class ExpenseController extends Controller
             $expense = $this->expenseRepository->delete($request->get('expense'));
             ExpenseDeleted::dispatch($expense);
         } catch (\Exception $e) {
-            Log::error('Error while deleting category: ' . $e);
+            Log::error('Error while deleting expense: ' . $e);
             DB::rollBack();
 
             return response()->json('Error while deleting expense.', 500);
@@ -99,7 +99,7 @@ class ExpenseController extends Controller
 
         DB::commit();
 
-        return response()->json('Expense Successfully deleted.');
+        return response()->json('Expense successfully deleted.');
     }
 
     public function aggregate(AggregateExpenseRequest $request): JsonResponse

@@ -18,7 +18,7 @@ class ExpenseFactory extends Factory
     public function definition(): array
     {
         return [
-            'description' => fake()->words(10),
+            'description' => fake()->word(),
             'amount' => random_int(100, 10000),
         ];
     }

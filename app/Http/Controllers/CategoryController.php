@@ -7,6 +7,7 @@ use App\Http\Requests\Category\StoreCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Repositories\CategoryRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class CategoryController extends Controller
@@ -18,10 +19,10 @@ class CategoryController extends Controller
         $this->categoryRepository = $categoryRepository;
     }
 
-    public function index(): ?JsonResponse
+    public function index(Request $request): ?JsonResponse
     {
         try {
-            $categories = $this->categoryRepository->getAllWithPagination();
+            $categories = $this->categoryRepository->getAllWithPagination($request);
         } catch (\Exception $e) {
             Log::error('Error while getting all categories with pagination: ' . $e);
 
@@ -80,6 +81,6 @@ class CategoryController extends Controller
             return response()->json('Error while deleting category.', 500);
         }
 
-        return response()->json('Category Successfully deleted.');
+        return response()->json('Category successfully deleted.');
     }
 }
