@@ -15,9 +15,6 @@ class AuthController extends Controller
     /**
      * Get a JWT via given credentials.
      *
-     * @bodyParam   email    string  required    The email of the  user.      Example: testuser@example.com
-     * @bodyParam   password    string  required    The password of the  user.   Example: secret
-     *
      * @response {
      *  "access_token": "eyJ0eXA...",
      *  "token_type": "Bearer",
@@ -70,7 +67,7 @@ class AuthController extends Controller
      * Log the user out.
      *
      * @response {
-     *  "message": "User successfully signed out"
+     *  "message": "User successfully signed out",
      * }
      */
     public function logout(): JsonResponse
