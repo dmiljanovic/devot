@@ -31,6 +31,12 @@ class ExpenseController extends Controller
     /**
      * Get all expenses with pagination
      *
+     * @queryParam category int Filter by ID of a category. Example 1.
+     * @queryParam price_min int Filter by minimum amount of an expense. Example: 100
+     * @queryParam price_max int Filter by maximum amount of an expense. Example: 200
+     * @queryParam date_from date string Filter by date created. Example: 20-5-2023
+     * @queryParam date_to date string Filter by date created. Example: 25-5-2023
+     *
      * @response {"current_page": 1,
      *  "data": [
      *  {
@@ -95,6 +101,7 @@ class ExpenseController extends Controller
      *  "to": 2,
      *  "total": 7
      * }
+     * @authenticated
      */
     public function index(Request $request): JsonResponse
     {
@@ -115,6 +122,7 @@ class ExpenseController extends Controller
      * @response {
      *  "message": "Expense successfully stored.",
      * }
+     * @authenticated
      */
     public function store(StoreExpenseRequest $request): JsonResponse
     {
@@ -149,6 +157,7 @@ class ExpenseController extends Controller
      *   "created_at": "2023-06-15T12:03:40.000000Z",
      *   "updated_at": null
      *  }
+     * @authenticated
      */
     public function show(ShowAndDeleteExpenseRequest $request): JsonResponse
     {
@@ -169,6 +178,7 @@ class ExpenseController extends Controller
      * @response {
      *  "message": "Expense successfully updated.",
      * }
+     * @authenticated
      */
     public function update(UpdateExpenseRequest $request): JsonResponse
     {
@@ -189,6 +199,7 @@ class ExpenseController extends Controller
      * @response {
      *  "message": "Expense successfully deleted.",
      * }
+     * @authenticated
      */
     public function destroy(ShowAndDeleteExpenseRequest $request): JsonResponse
     {
@@ -216,6 +227,7 @@ class ExpenseController extends Controller
      * @response {
      *  "34602.00",
      * }
+     * @authenticated
      */
     public function aggregate(AggregateExpenseRequest $request): JsonResponse
     {

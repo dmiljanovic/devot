@@ -16,15 +16,56 @@ endpoints:
       subgroupDescription: ''
       title: 'Get all expenses with pagination'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      category:
+        name: category
+        description: 'Filter by ID of a category. Example 1.'
+        required: false
+        example: 17
+        type: integer
+        custom: []
+      price_min:
+        name: price_min
+        description: 'Filter by minimum amount of an expense.'
+        required: false
+        example: 100
+        type: integer
+        custom: []
+      price_max:
+        name: price_max
+        description: 'Filter by maximum amount of an expense.'
+        required: false
+        example: 200
+        type: integer
+        custom: []
+      date_from:
+        name: date_from
+        description: 'date string Filter by date created.'
+        required: false
+        example: 20-5-2023
+        type: string
+        custom: []
+      date_to:
+        name: date_to
+        description: 'date string Filter by date created.'
+        required: false
+        example: 25-5-2023
+        type: string
+        custom: []
+    cleanQueryParameters:
+      category: 17
+      price_min: 100
+      price_max: 200
+      date_from: 20-5-2023
+      date_to: 25-5-2023
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -100,7 +141,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer PavD8f5Vkda3ZhEb64ec16g'
     controller: null
     method: null
     route: null
@@ -118,9 +162,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store new expense.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -132,27 +177,27 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: cumque
+        example: velit
         type: string
         custom: []
       description:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: true
-        example: 'Minus doloribus rerum sed.'
+        example: 'Necessitatibus deleniti qui et id facilis.'
         type: string
         custom: []
       amount:
         name: amount
         description: ''
         required: true
-        example: deleniti
+        example: veritatis
         type: string
         custom: []
     cleanBodyParameters:
-      category_id: cumque
-      description: 'Minus doloribus rerum sed.'
-      amount: deleniti
+      category_id: velit
+      description: 'Necessitatibus deleniti qui et id facilis.'
+      amount: veritatis
     fileParameters: []
     responses:
       -
@@ -165,7 +210,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer b8g64hZfd1cVaP3EaDv56ek'
     controller: null
     method: null
     route: null
@@ -183,9 +231,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Show single expense.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -193,11 +242,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: sint
+        example: voluptas
         type: string
         custom: []
     cleanUrlParameters:
-      id: sint
+      id: voluptas
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -205,11 +254,11 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: cupiditate
+        example: dolorum
         type: string
         custom: []
     cleanBodyParameters:
-      expense: cupiditate
+      expense: dolorum
     fileParameters: []
     responses:
       -
@@ -228,7 +277,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vga4d8bEVefkPDah661c3Z5'
     controller: null
     method: null
     route: null
@@ -247,9 +299,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update an expense.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -257,11 +310,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: non
+        example: harum
         type: string
         custom: []
     cleanUrlParameters:
-      id: non
+      id: harum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -269,7 +322,7 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: quae
+        example: non
         type: string
         custom: []
       category_id:
@@ -283,12 +336,12 @@ endpoints:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: false
-        example: 'In temporibus quibusdam aliquam rerum quos nihil sequi id.'
+        example: 'Quas labore blanditiis quasi quidem.'
         type: string
         custom: []
     cleanBodyParameters:
-      expense: quae
-      description: 'In temporibus quibusdam aliquam rerum quos nihil sequi id.'
+      expense: non
+      description: 'Quas labore blanditiis quasi quidem.'
     fileParameters: []
     responses:
       -
@@ -301,7 +354,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer ZvkdcE368fPbaV6e4hDga51'
     controller: null
     method: null
     route: null
@@ -319,9 +375,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Delete an expense.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -329,11 +386,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: aut
+        example: voluptas
         type: string
         custom: []
     cleanUrlParameters:
-      id: aut
+      id: voluptas
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -341,11 +398,11 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: et
+        example: odio
         type: string
         custom: []
     cleanBodyParameters:
-      expense: et
+      expense: odio
     fileParameters: []
     responses:
       -
@@ -358,7 +415,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6e3EDva4bf65kcgh1ZdVa8P'
     controller: null
     method: null
     route: null
@@ -376,9 +436,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Get aggregate expenses.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -386,11 +447,11 @@ endpoints:
         name: term
         description: ''
         required: true
-        example: sequi
+        example: fugit
         type: string
         custom: []
     cleanUrlParameters:
-      term: sequi
+      term: fugit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -398,11 +459,11 @@ endpoints:
         name: term
         description: 'Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>.'
         required: true
-        example: last_month
+        example: last_quarter
         type: string
         custom: []
     cleanBodyParameters:
-      term: last_month
+      term: last_quarter
     fileParameters: []
     responses:
       -
@@ -415,7 +476,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vV3h56a1Zga8ed4PDkEcb6f'
     controller: null
     method: null
     route: null

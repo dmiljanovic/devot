@@ -18,9 +18,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Get all categories with pagination'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -96,7 +97,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer chZg4V6a53d86fEkeab1PvD'
     controller: null
     method: null
     route: null
@@ -114,9 +118,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store new category.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -128,11 +133,11 @@ endpoints:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: flnmtel
+        example: tacrshgebkpkgodhbqtnapfiiehzqwtjdakaouwamgyjw
         type: string
         custom: []
     cleanBodyParameters:
-      name: flnmtel
+      name: tacrshgebkpkgodhbqtnapfiiehzqwtjdakaouwamgyjw
     fileParameters: []
     responses:
       -
@@ -145,7 +150,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1fk5DhVbec638Z6EPvgdaa4'
     controller: null
     method: null
     route: null
@@ -163,9 +171,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Show single category.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -173,11 +182,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: omnis
+        example: inventore
         type: string
         custom: []
     cleanUrlParameters:
-      id: omnis
+      id: inventore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -185,11 +194,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: aspernatur
+        example: quaerat
         type: string
         custom: []
     cleanBodyParameters:
-      category: aspernatur
+      category: quaerat
     fileParameters: []
     responses:
       -
@@ -205,7 +214,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vD5bVaZ41gfehkdE6P86c3a'
     controller: null
     method: null
     route: null
@@ -224,9 +236,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update a category.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -234,11 +247,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: quaerat
+        example: sit
         type: string
         custom: []
     cleanUrlParameters:
-      id: quaerat
+      id: sit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -246,19 +259,19 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: quia
+        example: nemo
         type: string
         custom: []
       name:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: okgwaqcijagceanyqxqlomxpejjybvvhsulrhgildc
+        example: ubhtekmltkvtsolnchatetiidvogkyl
         type: string
         custom: []
     cleanBodyParameters:
-      category: quia
-      name: okgwaqcijagceanyqxqlomxpejjybvvhsulrhgildc
+      category: nemo
+      name: ubhtekmltkvtsolnchatetiidvogkyl
     fileParameters: []
     responses:
       -
@@ -271,7 +284,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer VbadvaZf3hge16DkP85E4c6'
     controller: null
     method: null
     route: null
@@ -289,9 +305,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Delete a category.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -299,11 +316,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: quis
+        example: voluptatem
         type: string
         custom: []
     cleanUrlParameters:
-      id: quis
+      id: voluptatem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -311,11 +328,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: sed
+        example: inventore
         type: string
         custom: []
     cleanBodyParameters:
-      category: sed
+      category: inventore
     fileParameters: []
     responses:
       -
@@ -328,7 +345,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer PdagDZbk14VEcah3665vef8'
     controller: null
     method: null
     route: null

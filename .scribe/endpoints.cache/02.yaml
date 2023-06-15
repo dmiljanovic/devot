@@ -32,27 +32,27 @@ endpoints:
         name: name
         description: 'Must be between 2 and 100 characters.'
         required: true
-        example: crr
+        example: lef
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 100 characters.'
         required: true
-        example: wuckert.virgil@example.net
+        example: lucious.ankunding@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: '67u"_Kjod]#KCY@vB|'
+        example: pz;gjd+o-M1c=
         type: string
         custom: []
     cleanBodyParameters:
-      name: crr
-      email: wuckert.virgil@example.net
-      password: '67u"_Kjod]#KCY@vB|'
+      name: lef
+      email: lucious.ankunding@example.com
+      password: pz;gjd+o-M1c=
     fileParameters: []
     responses:
       -
@@ -104,19 +104,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: dorothy.mayer@example.com
+        example: cgaylord@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: aUW=vL0co2I_lsE
+        example: 'sZ$o%yT)`yB-&k9rA+='
         type: string
         custom: []
     cleanBodyParameters:
-      email: dorothy.mayer@example.com
-      password: aUW=vL0co2I_lsE
+      email: cgaylord@example.net
+      password: 'sZ$o%yT)`yB-&k9rA+='
     fileParameters: []
     responses:
       -
@@ -158,9 +158,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Log the user out.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -181,7 +182,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer DvP6E6gcdaV4h8kZ5efab31'
     controller: null
     method: null
     route: null
@@ -199,9 +203,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Refresh a token.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -227,13 +232,15 @@ endpoints:
             "created_at": null,
             "updated_at": null
             }
-
           }
         headers: []
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer PfDVga4c5d368ak1ehbvZ6E'
     controller: null
     method: null
     route: null
@@ -251,9 +258,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Get the authenticated User.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -279,7 +287,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6Pc8e5gavZakh3E1fVD6db4'
     controller: null
     method: null
     route: null

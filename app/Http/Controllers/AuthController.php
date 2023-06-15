@@ -69,6 +69,7 @@ class AuthController extends Controller
      * @response {
      *  "message": "User successfully signed out",
      * }
+     * @authenticated
      */
     public function logout(): JsonResponse
     {
@@ -92,8 +93,8 @@ class AuthController extends Controller
      *   "created_at": null,
      *   "updated_at": null
      *   }
-     *
      * }
+     * @authenticated
      */
     public function refresh(): JsonResponse
     {
@@ -111,6 +112,7 @@ class AuthController extends Controller
      *   "created_at": null,
      *   "updated_at": null
      *   }
+     * @authenticated
      */
     public function userProfile(): JsonResponse
     {

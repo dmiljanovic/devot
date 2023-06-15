@@ -85,6 +85,7 @@ class CategoryController extends Controller
      *  "to": 2,
      *  "total": 7
      * }
+     * @authenticated
      */
     public function index(Request $request): ?JsonResponse
     {
@@ -105,6 +106,7 @@ class CategoryController extends Controller
      * @response {
      *  "message": "Category successfully stored.",
      * }
+     * @authenticated
      */
     public function store(StoreCategoryRequest $request): JsonResponse
     {
@@ -128,6 +130,7 @@ class CategoryController extends Controller
      *  "created_at": null,
      *  "updated_at": null
      * }
+     * @authenticated
      */
     public function show(ShowAndDeleteCategoryRequest $request): JsonResponse
     {
@@ -148,6 +151,7 @@ class CategoryController extends Controller
      * @response {
      *  "message": "Category successfully updated.",
      * }
+     * @authenticated
      */
     public function update(UpdateCategoryRequest $request): JsonResponse
     {
@@ -168,6 +172,7 @@ class CategoryController extends Controller
      * @response {
      *  "message": "Category successfully deleted.",
      * }
+     * @authenticated
      */
     public function destroy(ShowAndDeleteCategoryRequest $request): JsonResponse
     {
