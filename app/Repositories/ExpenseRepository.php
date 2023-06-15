@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Enum\AggregateExpenseTermEnum;
 use App\Models\Expense;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -56,5 +57,35 @@ class ExpenseRepository implements CrudInterface
         $expense->category_id = $data['category_id'];
         $expense->description = $data['description'];
         $expense->save();
+    }
+
+    public function getAggregateByTerm(string $term)
+    {
+        $query = Expense::query();
+
+        switch ($term) {
+            case AggregateExpenseTermEnum::LAST_MONTH->value:
+                $query->whereBetween('created_at', [
+                    now()->subMonth()->startOfMonth(), now()->subMonth()->endOfMonth()
+                ]);
+                break;
+            case $term === AggregateExpenseTermEnum::LAST_YEAR->value:
+                $query->whereBetween('created_at', [
+                    now()->subYear()->startOfYear(), now()->subYear()->endOfYear()
+                ]);
+                break;
+            case $term === AggregateExpenseTermEnum::LAST_QUARTER->value:
+                $query->whereBetween('created_at', [
+                    now()->firstOfQuarter(), now()->lastOfQuarter()
+                ]);
+                break;
+            case $term === AggregateExpenseTermEnum::THIS_YEAR->value:
+                $query->whereBetween('created_at', [
+                    now()->startOfYear(), now()->endOfYear()
+                ]);
+                break;
+        }
+
+        return $query->sum('amount');
     }
 }

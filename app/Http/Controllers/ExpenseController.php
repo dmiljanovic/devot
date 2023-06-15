@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\ExpenseCreated;
 use App\Events\ExpenseDeleted;
+use App\Http\Requests\Expense\AggregateExpenseRequest;
 use App\Http\Requests\Expense\ShowAndDeleteExpenseRequest;
 use App\Http\Requests\Expense\StoreExpenseRequest;
 use App\Http\Requests\Expense\UpdateExpenseRequest;
@@ -99,5 +100,18 @@ class ExpenseController extends Controller
         DB::commit();
 
         return response()->json('Expense Successfully deleted.');
+    }
+
+    public function aggregate(AggregateExpenseRequest $request): JsonResponse
+    {
+        try {
+            $expenses = $this->expenseRepository->getAggregateByTerm($request->validated('term'));
+        } catch (\Exception $e) {
+            Log::error('Error while getting aggregate expenses: ' . $e);
+
+            return response()->json('Error while getting aggregate expenses.', 500);
+        }
+
+        return response()->json($expenses);
     }
 }
