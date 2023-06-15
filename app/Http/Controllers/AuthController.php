@@ -4,12 +4,34 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use Illuminate\Http\JsonResponse;
 use App\Models\User;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
+/**
+ * @group Authentication
+ *
+ * API endpoints for managing authentication
+ */
 class AuthController extends Controller
 {
     /**
      * Get a JWT via given credentials.
+     *
+     * @bodyParam   email    string  required    The email of the  user.      Example: testuser@example.com
+     * @bodyParam   password    string  required    The password of the  user.   Example: secret
+     *
+     * @response {
+     *  "access_token": "eyJ0eXA...",
+     *  "token_type": "Bearer",
+     *  "expires_in": "2023-06-15T12:39:21.898199Z",
+     *   "user": {
+     *   "id": 1,
+     *   "name": "Test",
+     *   "email": "test@test.com",
+     *   "total_amount": "10000000.00",
+     *   "created_at": null,
+     *   "updated_at": null
+     *   }
+     *
+     * }
      */
     public function login(LoginRequest $request): JsonResponse
     {
@@ -22,6 +44,17 @@ class AuthController extends Controller
 
     /**
      * Register a User.
+     *
+     * @response {
+     *  "message": "User successfully registered",
+     *  "user": {
+     *   "name": "Test",
+     *   "email": "test1@test.com",
+     *   "updated_at": "2023-06-15T12:04:26.000000Z",
+     *   "created_at": "2023-06-15T12:04:26.000000Z",
+     *   "id": 2
+     *  }
+     * }
      */
     public function register(RegisterRequest $request): JsonResponse
     {
@@ -34,7 +67,11 @@ class AuthController extends Controller
     }
 
     /**
-     * Log the user out (Invalidate the token).
+     * Log the user out.
+     *
+     * @response {
+     *  "message": "User successfully signed out"
+     * }
      */
     public function logout(): JsonResponse
     {
@@ -45,6 +82,21 @@ class AuthController extends Controller
 
     /**
      * Refresh a token.
+     *
+     * @response {
+     *  "access_token": "eyJ0eXA...",
+     *  "token_type": "Bearer",
+     *  "expires_in": "2023-06-15T12:39:21.898199Z",
+     *   "user": {
+     *   "id": 1,
+     *   "name": "Test",
+     *   "email": "test@test.com",
+     *   "total_amount": "10000000.00",
+     *   "created_at": null,
+     *   "updated_at": null
+     *   }
+     *
+     * }
      */
     public function refresh(): JsonResponse
     {
@@ -53,6 +105,15 @@ class AuthController extends Controller
 
     /**
      * Get the authenticated User.
+     *
+     * @response {
+     *   "id": 1,
+     *   "name": "Test",
+     *   "email": "test@test.com",
+     *   "total_amount": "10000000.00",
+     *   "created_at": null,
+     *   "updated_at": null
+     *   }
      */
     public function userProfile(): JsonResponse
     {
