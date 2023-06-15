@@ -196,9 +196,9 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ywt\",
-    \"email\": \"lamar.mertz@example.org\",
-    \"password\": \"w[0K%d!\"
+    \"name\": \"bc\",
+    \"email\": \"george.dibbert@example.org\",
+    \"password\": \"O4kU`il79P?z#*d\"
 }"
 </code></pre></div>
 
@@ -214,9 +214,9 @@ const headers = {
 };
 
 let body = {
-    "name": "ywt",
-    "email": "lamar.mertz@example.org",
-    "password": "w[0K%d!"
+    "name": "bc",
+    "email": "george.dibbert@example.org",
+    "password": "O4kU`il79P?z#*d"
 };
 
 fetch(url, {
@@ -321,10 +321,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-auth-register"
-               value="ywt"
+               value="bc"
                data-component="body">
     <br>
-<p>Must be between 2 and 100 characters. Example: <code>ywt</code></p>
+<p>Must be between 2 and 100 characters. Example: <code>bc</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -332,10 +332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-auth-register"
-               value="lamar.mertz@example.org"
+               value="george.dibbert@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 100 characters. Example: <code>lamar.mertz@example.org</code></p>
+<p>Must be a valid email address. Must not be greater than 100 characters. Example: <code>george.dibbert@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -343,10 +343,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-auth-register"
-               value="w[0K%d!"
+               value="O4kU`il79P?z#*d"
                data-component="body">
     <br>
-<p>Must be at least 4 characters. Example: <code>w[0K%d!</code></p>
+<p>Must be at least 4 characters. Example: <code>O4kU</code>il79P?z#*d`</p>
         </div>
         </form>
 
@@ -367,8 +367,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"bradtke.cassidy@example.com\",
-    \"password\": \"R*{2sx(%Q&gt;K`tUq2|zG\"
+    \"email\": \"tbartell@example.org\",
+    \"password\": \"G)9@No&lt;R^!ZYJp\"
 }"
 </code></pre></div>
 
@@ -384,8 +384,8 @@ const headers = {
 };
 
 let body = {
-    "email": "bradtke.cassidy@example.com",
-    "password": "R*{2sx(%Q&gt;K`tUq2|zG"
+    "email": "tbartell@example.org",
+    "password": "G)9@No&lt;R^!ZYJp"
 };
 
 fetch(url, {
@@ -493,10 +493,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-auth-login"
-               value="bradtke.cassidy@example.com"
+               value="tbartell@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>bradtke.cassidy@example.com</code></p>
+<p>Must be a valid email address. Example: <code>tbartell@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -504,10 +504,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-auth-login"
-               value="R*{2sx(%Q>K`tUq2|zG"
+               value="G)9@No<R^!ZYJp"
                data-component="body">
     <br>
-<p>Must be at least 4 characters. Example: <code>R*{2sx(%Q&gt;K</code>tUq2|zG`</p>
+<p>Must be at least 4 characters. Example: <code>G)9@No&lt;R^!ZYJp</code></p>
         </div>
         </form>
 
@@ -1129,7 +1129,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"fmwlnmvyidlmxvkxtilhazp\"
+    \"name\": \"ydcsunwsgtsinlmrdbmssjpiefdzkdbcqexllzbinboywjmgxdkdhzcycrovqgxkiahrxgxqmgk\"
 }"
 </code></pre></div>
 
@@ -1146,7 +1146,7 @@ const headers = {
 };
 
 let body = {
-    "name": "fmwlnmvyidlmxvkxtilhazp"
+    "name": "ydcsunwsgtsinlmrdbmssjpiefdzkdbcqexllzbinboywjmgxdkdhzcycrovqgxkiahrxgxqmgk"
 };
 
 fetch(url, {
@@ -1255,10 +1255,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-categories"
-               value="fmwlnmvyidlmxvkxtilhazp"
+               value="ydcsunwsgtsinlmrdbmssjpiefdzkdbcqexllzbinboywjmgxdkdhzcycrovqgxkiahrxgxqmgk"
                data-component="body">
     <br>
-<p>Must be at least 4 characters. Example: <code>fmwlnmvyidlmxvkxtilhazp</code></p>
+<p>Must be at least 4 characters. Example: <code>ydcsunwsgtsinlmrdbmssjpiefdzkdbcqexllzbinboywjmgxdkdhzcycrovqgxkiahrxgxqmgk</code></p>
         </div>
         </form>
 
@@ -1276,19 +1276,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "devot.test/api/categories/nam" \
+    --get "devot.test/api/categories/officiis" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category\": 12
+    \"category\": 16
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/categories/nam"
+    "devot.test/api/categories/officiis"
 );
 
 const headers = {
@@ -1298,7 +1298,7 @@ const headers = {
 };
 
 let body = {
-    "category": 12
+    "category": 16
 };
 
 fetch(url, {
@@ -1410,10 +1410,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-categories--id-"
-               value="nam"
+               value="officiis"
                data-component="url">
     <br>
-<p>The ID of the category. Example: <code>nam</code></p>
+<p>The ID of the category. Example: <code>officiis</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1422,10 +1422,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="category"                data-endpoint="GETapi-categories--id-"
-               value="12"
+               value="16"
                data-component="body">
     <br>
-<p>Example: <code>12</code></p>
+<p>Example: <code>16</code></p>
         </div>
         </form>
 
@@ -1443,20 +1443,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "devot.test/api/categories/eum" \
+    "devot.test/api/categories/maiores" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category\": 16,
-    \"name\": \"xskbzfttcgwbhqyeqtoeythfmqpm\"
+    \"category\": 11,
+    \"name\": \"kyiyrkdamttuelupvqkeiadwbspfrgsezobjnwsdadthwaypnwnnvwgpvqfpovviudkumowhjhxnkxf\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/categories/eum"
+    "devot.test/api/categories/maiores"
 );
 
 const headers = {
@@ -1466,8 +1466,8 @@ const headers = {
 };
 
 let body = {
-    "category": 16,
-    "name": "xskbzfttcgwbhqyeqtoeythfmqpm"
+    "category": 11,
+    "name": "kyiyrkdamttuelupvqkeiadwbspfrgsezobjnwsdadthwaypnwnnvwgpvqfpovviudkumowhjhxnkxf"
 };
 
 fetch(url, {
@@ -1580,10 +1580,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="PUTapi-categories--id-"
-               value="eum"
+               value="maiores"
                data-component="url">
     <br>
-<p>The ID of the category. Example: <code>eum</code></p>
+<p>The ID of the category. Example: <code>maiores</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1592,10 +1592,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="category"                data-endpoint="PUTapi-categories--id-"
-               value="16"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>16</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -1603,10 +1603,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="PUTapi-categories--id-"
-               value="xskbzfttcgwbhqyeqtoeythfmqpm"
+               value="kyiyrkdamttuelupvqkeiadwbspfrgsezobjnwsdadthwaypnwnnvwgpvqfpovviudkumowhjhxnkxf"
                data-component="body">
     <br>
-<p>Must be at least 4 characters. Example: <code>xskbzfttcgwbhqyeqtoeythfmqpm</code></p>
+<p>Must be at least 4 characters. Example: <code>kyiyrkdamttuelupvqkeiadwbspfrgsezobjnwsdadthwaypnwnnvwgpvqfpovviudkumowhjhxnkxf</code></p>
         </div>
         </form>
 
@@ -1624,19 +1624,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "devot.test/api/categories/dignissimos" \
+    "devot.test/api/categories/voluptatum" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category\": 3
+    \"category\": 11
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/categories/dignissimos"
+    "devot.test/api/categories/voluptatum"
 );
 
 const headers = {
@@ -1646,7 +1646,7 @@ const headers = {
 };
 
 let body = {
-    "category": 3
+    "category": 11
 };
 
 fetch(url, {
@@ -1755,10 +1755,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="DELETEapi-categories--id-"
-               value="dignissimos"
+               value="voluptatum"
                data-component="url">
     <br>
-<p>The ID of the category. Example: <code>dignissimos</code></p>
+<p>The ID of the category. Example: <code>voluptatum</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1767,10 +1767,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="category"                data-endpoint="DELETEapi-categories--id-"
-               value="3"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>3</code></p>
+<p>Example: <code>11</code></p>
         </div>
         </form>
 
@@ -1791,14 +1791,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "devot.test/api/" \
+    --get "devot.test/api/k" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/"
+    "devot.test/api/k"
 );
 
 const headers = {
@@ -1823,358 +1823,13 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;The route api could not be found.&quot;,
-    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
-    &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
-    &quot;line&quot;: 44,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php&quot;,
-            &quot;line&quot;: 162,
-            &quot;function&quot;: &quot;handleMatchedRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 753,
-            &quot;function&quot;: &quot;match&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\RouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 740,
-            &quot;function&quot;: &quot;findRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 729,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 190,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 165,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 134,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 166,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
-            &quot;line&quot;: 661,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 153,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 1063,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/devot/artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;message&quot;: &quot;Route not found.&quot;
 }</code>
  </pre>
     </span>
@@ -2254,10 +1909,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="fallbackPlaceholder"                data-endpoint="GETapi--fallbackPlaceholder-"
-               value=""
+               value="k"
                data-component="url">
     <br>
-
+<p>Example: <code>k</code></p>
             </div>
                     </form>
 
@@ -2279,7 +1934,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "devot.test/api/expenses?category=5&amp;price_min=100&amp;price_max=200&amp;date_from=20-5-2023&amp;date_to=25-5-2023" \
+    --get "devot.test/api/expenses?category=6&amp;price_min=100&amp;price_max=200&amp;date_from=20-5-2023&amp;date_to=25-5-2023" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2291,7 +1946,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "category": "5",
+    "category": "6",
     "price_min": "100",
     "price_max": "200",
     "date_from": "20-5-2023",
@@ -2473,10 +2128,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                name="category"                data-endpoint="GETapi-expenses"
-               value="5"
+               value="6"
                data-component="query">
     <br>
-<p>Filter by ID of a category. Example 1. Example: <code>5</code></p>
+<p>Filter by ID of a category. Example 1. Example: <code>6</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>price_min</code></b>&nbsp;&nbsp;
@@ -2543,9 +2198,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category_id\": \"quo\",
-    \"description\": \"Unde nisi assumenda tempore expedita ipsum eos.\",
-    \"amount\": \"ut\"
+    \"category_id\": \"voluptas\",
+    \"description\": \"Ex autem quos ducimus ducimus facilis.\",
+    \"amount\": \"dicta\"
 }"
 </code></pre></div>
 
@@ -2562,9 +2217,9 @@ const headers = {
 };
 
 let body = {
-    "category_id": "quo",
-    "description": "Unde nisi assumenda tempore expedita ipsum eos.",
-    "amount": "ut"
+    "category_id": "voluptas",
+    "description": "Ex autem quos ducimus ducimus facilis.",
+    "amount": "dicta"
 };
 
 fetch(url, {
@@ -2673,10 +2328,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="category_id"                data-endpoint="POSTapi-expenses"
-               value="quo"
+               value="voluptas"
                data-component="body">
     <br>
-<p>Example: <code>quo</code></p>
+<p>Example: <code>voluptas</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2684,10 +2339,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="POSTapi-expenses"
-               value="Unde nisi assumenda tempore expedita ipsum eos."
+               value="Ex autem quos ducimus ducimus facilis."
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Must not be greater than 256 characters. Example: <code>Unde nisi assumenda tempore expedita ipsum eos.</code></p>
+<p>Must be at least 8 characters. Must not be greater than 256 characters. Example: <code>Ex autem quos ducimus ducimus facilis.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount</code></b>&nbsp;&nbsp;
@@ -2695,10 +2350,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="amount"                data-endpoint="POSTapi-expenses"
-               value="ut"
+               value="dicta"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>dicta</code></p>
         </div>
         </form>
 
@@ -2716,19 +2371,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "devot.test/api/expenses/et" \
+    --get "devot.test/api/expenses/ea" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"expense\": 8
+    \"expense\": 13
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/expenses/et"
+    "devot.test/api/expenses/ea"
 );
 
 const headers = {
@@ -2738,7 +2393,7 @@ const headers = {
 };
 
 let body = {
-    "expense": 8
+    "expense": 13
 };
 
 fetch(url, {
@@ -2853,10 +2508,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-expenses--id-"
-               value="et"
+               value="ea"
                data-component="url">
     <br>
-<p>The ID of the expense. Example: <code>et</code></p>
+<p>The ID of the expense. Example: <code>ea</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2865,10 +2520,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="expense"                data-endpoint="GETapi-expenses--id-"
-               value="8"
+               value="13"
                data-component="body">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>13</code></p>
         </div>
         </form>
 
@@ -2886,20 +2541,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "devot.test/api/expenses/eum" \
+    "devot.test/api/expenses/impedit" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"expense\": 19,
-    \"description\": \"Deleniti esse optio corrupti quaerat quo ea qui.\"
+    \"expense\": 5,
+    \"description\": \"Et animi officia natus fuga aut ut.\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/expenses/eum"
+    "devot.test/api/expenses/impedit"
 );
 
 const headers = {
@@ -2909,8 +2564,8 @@ const headers = {
 };
 
 let body = {
-    "expense": 19,
-    "description": "Deleniti esse optio corrupti quaerat quo ea qui."
+    "expense": 5,
+    "description": "Et animi officia natus fuga aut ut."
 };
 
 fetch(url, {
@@ -3023,10 +2678,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="PUTapi-expenses--id-"
-               value="eum"
+               value="impedit"
                data-component="url">
     <br>
-<p>The ID of the expense. Example: <code>eum</code></p>
+<p>The ID of the expense. Example: <code>impedit</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -3035,10 +2690,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="expense"                data-endpoint="PUTapi-expenses--id-"
-               value="19"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>5</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -3057,10 +2712,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="PUTapi-expenses--id-"
-               value="Deleniti esse optio corrupti quaerat quo ea qui."
+               value="Et animi officia natus fuga aut ut."
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Must not be greater than 256 characters. Example: <code>Deleniti esse optio corrupti quaerat quo ea qui.</code></p>
+<p>Must be at least 8 characters. Must not be greater than 256 characters. Example: <code>Et animi officia natus fuga aut ut.</code></p>
         </div>
         </form>
 
@@ -3078,19 +2733,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "devot.test/api/expenses/numquam" \
+    "devot.test/api/expenses/quam" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"expense\": 18
+    \"expense\": 15
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/expenses/numquam"
+    "devot.test/api/expenses/quam"
 );
 
 const headers = {
@@ -3100,7 +2755,7 @@ const headers = {
 };
 
 let body = {
-    "expense": 18
+    "expense": 15
 };
 
 fetch(url, {
@@ -3209,10 +2864,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="DELETEapi-expenses--id-"
-               value="numquam"
+               value="quam"
                data-component="url">
     <br>
-<p>The ID of the expense. Example: <code>numquam</code></p>
+<p>The ID of the expense. Example: <code>quam</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -3221,10 +2876,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="expense"                data-endpoint="DELETEapi-expenses--id-"
-               value="18"
+               value="15"
                data-component="body">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>15</code></p>
         </div>
         </form>
 
@@ -3242,19 +2897,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "devot.test/api/expenses/aggregate/rem" \
+    --get "devot.test/api/expenses/aggregate/velit" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"term\": \"this_year\"
+    \"term\": \"last_year\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "devot.test/api/expenses/aggregate/rem"
+    "devot.test/api/expenses/aggregate/velit"
 );
 
 const headers = {
@@ -3264,7 +2919,7 @@ const headers = {
 };
 
 let body = {
-    "term": "this_year"
+    "term": "last_year"
 };
 
 fetch(url, {
@@ -3373,10 +3028,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="term"                data-endpoint="GETapi-expenses-aggregate--term-"
-               value="rem"
+               value="velit"
                data-component="url">
     <br>
-<p>Example: <code>rem</code></p>
+<p>Example: <code>velit</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -3385,10 +3040,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="term"                data-endpoint="GETapi-expenses-aggregate--term-"
-               value="this_year"
+               value="last_year"
                data-component="body">
     <br>
-<p>Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>. Example: <code>this_year</code></p>
+<p>Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>. Example: <code>last_year</code></p>
         </div>
         </form>
 
