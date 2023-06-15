@@ -100,7 +100,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer chZg4V6a53d86fEkeab1PvD'
+      - 'Bearer evaagP6f3EdZV54ch16k8bD'
     controller: null
     method: null
     route: null
@@ -133,11 +133,11 @@ endpoints:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: tacrshgebkpkgodhbqtnapfiiehzqwtjdakaouwamgyjw
+        example: fmwlnmvyidlmxvkxtilhazp
         type: string
         custom: []
     cleanBodyParameters:
-      name: tacrshgebkpkgodhbqtnapfiiehzqwtjdakaouwamgyjw
+      name: fmwlnmvyidlmxvkxtilhazp
     fileParameters: []
     responses:
       -
@@ -153,7 +153,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1fk5DhVbec638Z6EPvgdaa4'
+      - 'Bearer vP5DfV61Zaa8ch34Eegdbk6'
     controller: null
     method: null
     route: null
@@ -182,11 +182,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: inventore
+        example: nam
         type: string
         custom: []
     cleanUrlParameters:
-      id: inventore
+      id: nam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -194,11 +194,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: quaerat
-        type: string
+        example: 12
+        type: integer
         custom: []
     cleanBodyParameters:
-      category: quaerat
+      category: 12
     fileParameters: []
     responses:
       -
@@ -217,7 +217,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vD5bVaZ41gfehkdE6P86c3a'
+      - 'Bearer Pg6b65cdakZah18Dv43VefE'
     controller: null
     method: null
     route: null
@@ -247,11 +247,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: sit
+        example: eum
         type: string
         custom: []
     cleanUrlParameters:
-      id: sit
+      id: eum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -259,19 +259,19 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: nemo
-        type: string
+        example: 16
+        type: integer
         custom: []
       name:
         name: name
         description: 'Must be at least 4 characters.'
         required: true
-        example: ubhtekmltkvtsolnchatetiidvogkyl
+        example: xskbzfttcgwbhqyeqtoeythfmqpm
         type: string
         custom: []
     cleanBodyParameters:
-      category: nemo
-      name: ubhtekmltkvtsolnchatetiidvogkyl
+      category: 16
+      name: xskbzfttcgwbhqyeqtoeythfmqpm
     fileParameters: []
     responses:
       -
@@ -287,7 +287,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer VbadvaZf3hge16DkP85E4c6'
+      - 'Bearer d5vbcZh863fDkVeEagP4a61'
     controller: null
     method: null
     route: null
@@ -316,11 +316,11 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: voluptatem
+        example: dignissimos
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatem
+      id: dignissimos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -328,11 +328,11 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: inventore
-        type: string
+        example: 3
+        type: integer
         custom: []
     cleanBodyParameters:
-      category: inventore
+      category: 3
     fileParameters: []
     responses:
       -
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PdagDZbk14VEcah3665vef8'
+      - 'Bearer d6ga13kbaDEVvfPe458Zc6h'
     controller: null
     method: null
     route: null

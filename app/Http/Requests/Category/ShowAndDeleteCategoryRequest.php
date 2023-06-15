@@ -27,7 +27,7 @@ class ShowAndDeleteCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category' => 'required|exists:categories,id'
+            'category' => 'required|integer|exists:categories,id'
         ];
     }
 }

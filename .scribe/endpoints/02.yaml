@@ -30,27 +30,27 @@ endpoints:
         name: name
         description: 'Must be between 2 and 100 characters.'
         required: true
-        example: lef
+        example: ywt
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 100 characters.'
         required: true
-        example: lucious.ankunding@example.com
+        example: lamar.mertz@example.org
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: pz;gjd+o-M1c=
+        example: 'w[0K%d!'
         type: string
         custom: []
     cleanBodyParameters:
-      name: lef
-      email: lucious.ankunding@example.com
-      password: pz;gjd+o-M1c=
+      name: ywt
+      email: lamar.mertz@example.org
+      password: 'w[0K%d!'
     fileParameters: []
     responses:
       -
@@ -102,19 +102,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: cgaylord@example.net
+        example: bradtke.cassidy@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: 'sZ$o%yT)`yB-&k9rA+='
+        example: 'R*{2sx(%Q>K`tUq2|zG'
         type: string
         custom: []
     cleanBodyParameters:
-      email: cgaylord@example.net
-      password: 'sZ$o%yT)`yB-&k9rA+='
+      email: bradtke.cassidy@example.com
+      password: 'R*{2sx(%Q>K`tUq2|zG'
     fileParameters: []
     responses:
       -
@@ -183,7 +183,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DvP6E6gcdaV4h8kZ5efab31'
+      - 'Bearer vP5ZhV1dEaDc4gf3k66e8ab'
     controller: null
     method: null
     route: null
@@ -238,7 +238,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PfDVga4c5d368ak1ehbvZ6E'
+      - 'Bearer 8Vcv1PhZ53g664aeEadkDfb'
     controller: null
     method: null
     route: null
@@ -288,7 +288,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6Pc8e5gavZakh3E1fVD6db4'
+      - 'Bearer 8Dcedvf5a46P1ZbEhg3a6kV'
     controller: null
     method: null
     route: null

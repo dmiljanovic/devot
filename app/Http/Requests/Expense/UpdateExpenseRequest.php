@@ -27,7 +27,7 @@ class UpdateExpenseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'expense' => 'required|exists:expenses,id',
+            'expense' => 'required|integer|exists:expenses,id',
             'category_id' => 'sometimes|exists:categories,id',
             'description' => 'sometimes|string|min:8|max:256',
         ];

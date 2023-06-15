@@ -29,7 +29,7 @@ endpoints:
         name: category
         description: 'Filter by ID of a category. Example 1.'
         required: false
-        example: 17
+        example: 5
         type: integer
         custom: []
       price_min:
@@ -61,7 +61,7 @@ endpoints:
         type: string
         custom: []
     cleanQueryParameters:
-      category: 17
+      category: 5
       price_min: 100
       price_max: 200
       date_from: 20-5-2023
@@ -144,7 +144,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PavD8f5Vkda3ZhEb64ec16g'
+      - 'Bearer d3D1v6fP8g5e4kaVa6hZEcb'
     controller: null
     method: null
     route: null
@@ -177,27 +177,27 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: velit
+        example: quo
         type: string
         custom: []
       description:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: true
-        example: 'Necessitatibus deleniti qui et id facilis.'
+        example: 'Unde nisi assumenda tempore expedita ipsum eos.'
         type: string
         custom: []
       amount:
         name: amount
         description: ''
         required: true
-        example: veritatis
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      category_id: velit
-      description: 'Necessitatibus deleniti qui et id facilis.'
-      amount: veritatis
+      category_id: quo
+      description: 'Unde nisi assumenda tempore expedita ipsum eos.'
+      amount: ut
     fileParameters: []
     responses:
       -
@@ -213,7 +213,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer b8g64hZfd1cVaP3EaDv56ek'
+      - 'Bearer 84DvEVe66bafkPhaZ35cdg1'
     controller: null
     method: null
     route: null
@@ -242,11 +242,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: voluptas
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptas
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -254,11 +254,11 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: dolorum
-        type: string
+        example: 8
+        type: integer
         custom: []
     cleanBodyParameters:
-      expense: dolorum
+      expense: 8
     fileParameters: []
     responses:
       -
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vga4d8bEVefkPDah661c3Z5'
+      - 'Bearer 1chkZV6aE3vgdba486PDfe5'
     controller: null
     method: null
     route: null
@@ -310,11 +310,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: harum
+        example: eum
         type: string
         custom: []
     cleanUrlParameters:
-      id: harum
+      id: eum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -322,8 +322,8 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: non
-        type: string
+        example: 19
+        type: integer
         custom: []
       category_id:
         name: category_id
@@ -336,12 +336,12 @@ endpoints:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: false
-        example: 'Quas labore blanditiis quasi quidem.'
+        example: 'Deleniti esse optio corrupti quaerat quo ea qui.'
         type: string
         custom: []
     cleanBodyParameters:
-      expense: non
-      description: 'Quas labore blanditiis quasi quidem.'
+      expense: 19
+      description: 'Deleniti esse optio corrupti quaerat quo ea qui.'
     fileParameters: []
     responses:
       -
@@ -357,7 +357,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ZvkdcE368fPbaV6e4hDga51'
+      - 'Bearer 65eZ6chfVg4183aPvDdbEak'
     controller: null
     method: null
     route: null
@@ -386,11 +386,11 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: voluptas
+        example: numquam
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptas
+      id: numquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -398,11 +398,11 @@ endpoints:
         name: expense
         description: ''
         required: true
-        example: odio
-        type: string
+        example: 18
+        type: integer
         custom: []
     cleanBodyParameters:
-      expense: odio
+      expense: 18
     fileParameters: []
     responses:
       -
@@ -418,7 +418,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6e3EDva4bf65kcgh1ZdVa8P'
+      - 'Bearer 35ahv8abfVgZ6kPecdD61E4'
     controller: null
     method: null
     route: null
@@ -447,11 +447,11 @@ endpoints:
         name: term
         description: ''
         required: true
-        example: fugit
+        example: rem
         type: string
         custom: []
     cleanUrlParameters:
-      term: fugit
+      term: rem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -459,11 +459,11 @@ endpoints:
         name: term
         description: 'Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>.'
         required: true
-        example: last_quarter
+        example: this_year
         type: string
         custom: []
     cleanBodyParameters:
-      term: last_quarter
+      term: this_year
     fileParameters: []
     responses:
       -
@@ -479,7 +479,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vV3h56a1Zga8ed4PDkEcb6f'
+      - 'Bearer 1vPdVkb5366D4hfeZaa8gcE'
     controller: null
     method: null
     route: null

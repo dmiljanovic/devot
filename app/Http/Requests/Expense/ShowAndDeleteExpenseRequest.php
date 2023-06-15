@@ -27,7 +27,7 @@ class ShowAndDeleteExpenseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'expense' => 'required|exists:expenses,id'
+            'expense' => 'required|integer|exists:expenses,id'
         ];
     }
 }
