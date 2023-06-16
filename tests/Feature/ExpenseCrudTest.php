@@ -6,11 +6,13 @@ use App\Models\Bill;
 use App\Models\Category;
 use App\Models\Expense;
 use App\Models\User;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ExpenseCrudTest extends TestCase
 {
+    use DatabaseTransactions;
     use DatabaseMigrations;
 
     private string $token;
@@ -35,7 +37,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_read_all_the_expenses(): void
+    public function an_user_can_read_all_the_expenses(): void
     {
         $response = $this->get('/api/expenses');
 
@@ -44,7 +46,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_read_single_expense(): void
+    public function an_user_can_read_single_expense(): void
     {
         $response = $this->get('/api/expenses/' . $this->expense->id);
 
@@ -52,7 +54,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_users_can_create_a_new_expense(): void
+    public function an_users_can_create_a_new_expense(): void
     {
         $expense = Expense::factory()
             ->for(User::factory()->create())
@@ -65,7 +67,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_users_can_update_an_expense(): void
+    public function an_users_can_update_its_expense(): void
     {
         $response = $this->put(
             '/api/expenses/' . $this->expense->id,
@@ -76,7 +78,7 @@ class ExpenseCrudTest extends TestCase
     }
 
     /** @test */
-    public function a_users_can_delete_an_expense(): void
+    public function an_users_can_delete_its_expense(): void
     {
         $response = $this->delete('/api/expenses/' . $this->expense->id);
 

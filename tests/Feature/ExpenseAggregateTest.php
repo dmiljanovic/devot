@@ -13,8 +13,6 @@ class ExpenseAggregateTest extends TestCase
 {
     use DatabaseMigrations;
 
-    private string $token;
-
     public function setUp(): void
     {
         parent::setUp();
