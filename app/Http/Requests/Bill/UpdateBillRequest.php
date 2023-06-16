@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Http\Requests\Expense;
+namespace App\Http\Requests\Bill;
 
+use App\Traits\RequestQueryParams;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreExpenseRequest extends FormRequest
+class UpdateBillRequest extends FormRequest
 {
+    use RequestQueryParams;
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,10 +27,9 @@ class StoreExpenseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_id' => 'required|exists:categories,id',
-            'bill_id' => 'sometimes|exists:bills,id',
-            'description' => 'required|string|min:8|max:256',
-            'amount' => 'required|decimal:2',
+            'bill' => 'required|exists:bills,id',
+            'expenses' => 'sometimes|array',
+            'expenses.*' => 'sometimes|exists:expenses,id'
         ];
     }
 }

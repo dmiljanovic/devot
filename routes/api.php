@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpenseController;
 use Illuminate\Http\Response;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('jwtAuth')->group(function () {
+    Route::resource('bills', BillController::class)->only(['index', 'show', 'destroy']);
     Route::resource('categories', CategoryController::class)->except(['create', 'edit']);
     Route::resource('expenses', ExpenseController::class)->except(['create', 'edit']);
     Route::get('expenses/aggregate/{term}', [ExpenseController::class, 'aggregate']);

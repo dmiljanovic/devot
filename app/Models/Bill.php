@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Category extends Model
+class Bill extends Model
 {
     use HasFactory;
     /**
@@ -15,11 +16,20 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'expenses',
     ];
 
+
     /**
-     * Get the expenses for the category.
+     * Get the user that owns the bill.
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the expenses for the bill.
      */
     public function expenses(): HasMany
     {

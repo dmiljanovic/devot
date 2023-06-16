@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\Bill;
 use App\Models\Expense;
 use App\Models\User;
 
@@ -13,10 +14,10 @@ class UserRepository
         $user->total_amount -= $expense->amount;
         $user->save();
     }
-    public function increaseTotalAmount(Expense $expense): void
+    public function increaseTotalAmount(Expense|Bill $model): void
     {
-        $user = $this->getById($expense->user_id);
-        $user->total_amount += $expense->amount;
+        $user = $this->getById($model->user_id);
+        $user->total_amount += $model->amount;
         $user->save();
     }
 
