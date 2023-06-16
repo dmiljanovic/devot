@@ -27,6 +27,8 @@ class CategoryController extends Controller
     /**
      * Get all categories with pagination
      *
+     * @queryParam name string Filter by name of a category. Example 1.
+     *
      * @response {"current_page": 1,
      *  "data": [
      *   {

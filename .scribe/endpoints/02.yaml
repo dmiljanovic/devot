@@ -1,24 +1,171 @@
-name: Authentication
+name: 'Expense CRUD'
 description: |-
 
-  API endpoints for managing authentication
+  API endpoints for managing Expense CRUD operations
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/auth/register
+      - GET
+    uri: api/expenses
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Register a User.'
+      title: 'Get all expenses with pagination'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      category:
+        name: category
+        description: 'Filter by ID of a category. Example 1.'
+        required: false
+        example: 7
+        type: integer
+        custom: []
+      price_min:
+        name: price_min
+        description: 'Filter by minimum amount of an expense.'
+        required: false
+        example: 100
+        type: integer
+        custom: []
+      price_max:
+        name: price_max
+        description: 'Filter by maximum amount of an expense.'
+        required: false
+        example: 200
+        type: integer
+        custom: []
+      date_from:
+        name: date_from
+        description: 'date string Filter by date created.'
+        required: false
+        example: 20-5-2023
+        type: string
+        custom: []
+      date_to:
+        name: date_to
+        description: 'date string Filter by date created.'
+        required: false
+        example: 25-5-2023
+        type: string
+        custom: []
+    cleanQueryParameters:
+      category: 7
+      price_min: 100
+      price_max: 200
+      date_from: 20-5-2023
+      date_to: 25-5-2023
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {"current_page": 1,
+           "data": [
+           {
+             "id": 1,
+             "user_id": 1,
+             "category_id": 1,
+             "description": "Test description...",
+             "amount": "196.00",
+             "created_at": "2023-06-15T12:03:40.000000Z",
+             "updated_at": null
+            },
+            {
+             "id": 2,
+             "user_id": 1,
+             "category_id": 2,
+             "description": "Test description...",
+             "amount": "4893.00",
+             "created_at": "2023-06-15T12:03:40.000000Z",
+             "updated_at": null
+            }
+           ],
+           "first_page_url": "http://devot.test/api/expenses?page=1",
+           "from": 1,
+           "last_page": 4,
+           "last_page_url": "http://devot.test/api/expenses?page=4",
+           "links": [
+            {
+             "url": null,
+             "label": "&laquo; Previous",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=1",
+             "label": "1",
+             "active": true
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=2",
+             "label": "2",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=3",
+             "label": "3",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=4",
+             "label": "4",
+             "active": false
+            },
+            {
+             "url": "http://devot.test/api/expenses?page=2",
+             "label": "Next &raquo;",
+             "active": false
+            }
+           ],
+           "next_page_url": "http://devot.test/api/expenses?page=2",
+           "path": "http://devot.test/api/expenses",
+           "per_page": 2,
+           "prev_page_url": null,
+           "to": 2,
+           "total": 7
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Zegcahkd36b5a84fEV1vDP6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/expenses
+    metadata:
+      groupName: 'Expense CRUD'
+      groupDescription: |-
+
+        API endpoints for managing Expense CRUD operations
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store new expense.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -26,162 +173,175 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must be between 2 and 100 characters.'
+      category_id:
+        name: category_id
+        description: ''
         required: true
-        example: aff
+        example: 1
+        type: int
+        custom: []
+      bill_id:
+        name: bill_id
+        description: ''
+        required: false
+        example: null
         type: string
         custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 100 characters.'
+      description:
+        name: description
+        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: true
-        example: rice.junior@example.org
+        example: 'Commodi cum eius sed pariatur incidunt ad.'
         type: string
         custom: []
-      password:
-        name: password
-        description: 'Must be at least 4 characters.'
+      amount:
+        name: amount
+        description: ''
         required: true
-        example: 7Akwuf
-        type: string
-        custom: []
-      password_confirmation:
-        name: password_confirmation
-        description: 'Must be same as password.'
-        required: true
-        example: 7Akwuf
-        type: string
+        example: 1200
+        type: int
         custom: []
     cleanBodyParameters:
-      name: im
-      email: cheller@example.com
-      password: 2WrbXA
+      category_id: consequatur
+      description: 'Rerum ut nostrum laboriosam excepturi accusantium dolores.'
+      amount: libero
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "message": "User successfully registered",
-           "user": {
-            "name": "Test",
-            "email": "test1@test.com",
-            "updated_at": "2023-06-15T12:04:26.000000Z",
-            "created_at": "2023-06-15T12:04:26.000000Z",
-            "id": 2
+           "message": "Expense successfully stored.",
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6cZ3vfPDegaV4h1k8bd5aE6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/expenses/{id}'
+    metadata:
+      groupName: 'Expense CRUD'
+      groupDescription: |-
+
+        API endpoints for managing Expense CRUD operations
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show single expense.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: 1
+        type: int
+        custom: []
+    cleanUrlParameters:
+      id: doloremque
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters:
+      expense: 16
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "id": 2,
+            "user_id": 1,
+            "category_id": 2,
+            "description": "Test description...",
+            "amount": "4893.00",
+            "created_at": "2023-06-15T12:03:40.000000Z",
+            "updated_at": null
            }
-          }
         headers: []
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer f8kv4gEchZV3baP1ead56D6'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - POST
-    uri: api/auth/login
+      - PUT
+      - PATCH
+    uri: 'api/expenses/{id}'
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get a JWT via given credentials.'
+      title: 'Update an expense.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: 1
+        type: int
+        custom: []
+    cleanUrlParameters:
+      id: atque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: alphonso.steuber@example.org
-        type: string
+      category_id:
+        name: category_id
+        description: ''
+        required: false
+        example: null
+        type: int
         custom: []
-      password:
-        name: password
-        description: 'Must be at least 4 characters.'
-        required: true
-        example: 'R(~\NN^1f]]x7/h7SK'
+      description:
+        name: description
+        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
+        required: false
+        example: 'Nemo sit aut sit ducimus officiis saepe.'
         type: string
         custom: []
     cleanBodyParameters:
-      email: alphonso.steuber@example.org
-      password: 'R(~\NN^1f]]x7/h7SK'
+      expense: 19
+      description: 'Voluptatem optio impedit sed voluptatem labore et.'
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "access_token": "eyJ0eXA...",
-           "token_type": "Bearer",
-           "expires_in": "2023-06-15T12:39:21.898199Z",
-            "user": {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
-
-          }
-        headers: []
-        description: ''
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/auth/logout
-    metadata:
-      groupName: Authentication
-      groupDescription: |-
-
-        API endpoints for managing authentication
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Log the user out.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {ACCESS_TOKEN}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-           "message": "User successfully signed out",
+           "message": "Expense successfully updated.",
           }
         headers: []
         description: ''
@@ -190,23 +350,23 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1e53cDEd8a6afbgZPhvV4k6'
+      - 'Bearer PVabZD65fE6c83vgk14deha'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - GET
-    uri: api/auth/refresh
+      - DELETE
+    uri: 'api/expenses/{id}'
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Refresh a token.'
+      title: 'Delete an expense.'
       description: ''
       authenticated: true
       custom: []
@@ -214,29 +374,28 @@ endpoints:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the expense.'
+        required: true
+        example: 1
+        type: int
+        custom: []
+    cleanUrlParameters:
+      id: minima
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
-    cleanBodyParameters: []
+    cleanBodyParameters:
+      expense: 2
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "access_token": "eyJ0eXA...",
-           "token_type": "Bearer",
-           "expires_in": "2023-06-15T12:39:21.898199Z",
-            "user": {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
+           "message": "Expense successfully deleted.",
           }
         headers: []
         description: ''
@@ -245,7 +404,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Pva1aDc5Z6hgE3kf86Ve4db'
+      - 'Bearer g5h8eavZ6EDdaf4kb163cVP'
     controller: null
     method: null
     route: null
@@ -253,15 +412,15 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/auth/user-profile
+    uri: 'api/expenses/aggregate/{term}'
     metadata:
-      groupName: Authentication
+      groupName: 'Expense CRUD'
       groupDescription: |-
 
-        API endpoints for managing authentication
+        API endpoints for managing Expense CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get the authenticated User.'
+      title: 'Get aggregate expenses.'
       description: ''
       authenticated: true
       custom: []
@@ -269,25 +428,29 @@ endpoints:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      term:
+        name: term
+        description: ''
+        required: true
+        example: 'last_month, last_quarter, last_year, or this_year'
+        type: string
+        custom: []
+    cleanUrlParameters:
+      term: commodi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
-    cleanBodyParameters: []
+    cleanBodyParameters:
+      term: last_year
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-            "id": 1,
-            "name": "Test",
-            "email": "test@test.com",
-            "total_amount": "10000000.00",
-            "created_at": null,
-            "updated_at": null
-            }
+           "34602.00",
+          }
         headers: []
         description: ''
         custom: []
@@ -295,7 +458,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ca64VkPEga18ZhDf6dvb5e3'
+      - 'Bearer fD36Pbvhkdg4aE8cZVa651e'
     controller: null
     method: null
     route: null

@@ -1,20 +1,20 @@
-name: 'Expense CRUD'
+name: 'Category CRUD'
 description: |-
 
-  API endpoints for managing Expense CRUD operations
+  API endpoints for managing Category CRUD operations
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/expenses
+    uri: api/categories
     metadata:
-      groupName: 'Expense CRUD'
+      groupName: 'Category CRUD'
       groupDescription: |-
 
-        API endpoints for managing Expense CRUD operations
+        API endpoints for managing Category CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get all expenses with pagination'
+      title: 'Get all categories with pagination'
       description: ''
       authenticated: true
       custom: []
@@ -25,47 +25,15 @@ endpoints:
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
-      category:
-        name: category
-        description: 'Filter by ID of a category. Example 1.'
+      name:
+        name: name
+        description: 'Filter by name of a category. Example 1.'
         required: false
-        example: 11
-        type: integer
-        custom: []
-      price_min:
-        name: price_min
-        description: 'Filter by minimum amount of an expense.'
-        required: false
-        example: 100
-        type: integer
-        custom: []
-      price_max:
-        name: price_max
-        description: 'Filter by maximum amount of an expense.'
-        required: false
-        example: 200
-        type: integer
-        custom: []
-      date_from:
-        name: date_from
-        description: 'date string Filter by date created.'
-        required: false
-        example: 20-5-2023
-        type: string
-        custom: []
-      date_to:
-        name: date_to
-        description: 'date string Filter by date created.'
-        required: false
-        example: 25-5-2023
+        example: aliquam
         type: string
         custom: []
     cleanQueryParameters:
-      category: 11
-      price_min: 100
-      price_max: 200
-      date_from: 20-5-2023
-      date_to: 25-5-2023
+      name: aliquam
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -75,29 +43,23 @@ endpoints:
         content: |-
           {"current_page": 1,
            "data": [
-           {
+            {
              "id": 1,
-             "user_id": 1,
-             "category_id": 1,
-             "description": "Test description...",
-             "amount": "196.00",
-             "created_at": "2023-06-15T12:03:40.000000Z",
+             "name": "Food",
+             "created_at": null,
              "updated_at": null
             },
             {
              "id": 2,
-             "user_id": 1,
-             "category_id": 2,
-             "description": "Test description...",
-             "amount": "4893.00",
-             "created_at": "2023-06-15T12:03:40.000000Z",
+             "name": "Household items",
+             "created_at": null,
              "updated_at": null
             }
            ],
-           "first_page_url": "http://devot.test/api/expenses?page=1",
+           "first_page_url": "http://devot.test/api/categories?page=1",
            "from": 1,
            "last_page": 4,
-           "last_page_url": "http://devot.test/api/expenses?page=4",
+           "last_page_url": "http://devot.test/api/categories?page=4",
            "links": [
             {
              "url": null,
@@ -105,33 +67,33 @@ endpoints:
              "active": false
             },
             {
-             "url": "http://devot.test/api/expenses?page=1",
+             "url": "http://devot.test/api/categories?page=1",
              "label": "1",
              "active": true
             },
             {
-             "url": "http://devot.test/api/expenses?page=2",
+             "url": "http://devot.test/api/categories?page=2",
              "label": "2",
              "active": false
             },
             {
-             "url": "http://devot.test/api/expenses?page=3",
+             "url": "http://devot.test/api/categories?page=3",
              "label": "3",
              "active": false
             },
             {
-             "url": "http://devot.test/api/expenses?page=4",
+             "url": "http://devot.test/api/categories?page=4",
              "label": "4",
              "active": false
             },
             {
-             "url": "http://devot.test/api/expenses?page=2",
+             "url": "http://devot.test/api/categories?page=2",
              "label": "Next &raquo;",
              "active": false
             }
            ],
-           "next_page_url": "http://devot.test/api/expenses?page=2",
-           "path": "http://devot.test/api/expenses",
+           "next_page_url": "http://devot.test/api/categories?page=2",
+           "path": "http://devot.test/api/categories",
            "per_page": 2,
            "prev_page_url": null,
            "to": 2,
@@ -144,7 +106,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hb65kcEZg6adfPDVev34a81'
+      - 'Bearer E8Zdhf66Dv4kV5bePaa13cg'
     controller: null
     method: null
     route: null
@@ -152,15 +114,15 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/expenses
+    uri: api/categories
     metadata:
-      groupName: 'Expense CRUD'
+      groupName: 'Category CRUD'
       groupDescription: |-
 
-        API endpoints for managing Expense CRUD operations
+        API endpoints for managing Category CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store new expense.'
+      title: 'Store new category.'
       description: ''
       authenticated: true
       custom: []
@@ -173,38 +135,22 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      category_id:
-        name: category_id
-        description: ''
+      name:
+        name: name
+        description: 'Must be at least 4 characters.'
         required: true
-        example: 12
-        type: int
-        custom: []
-      description:
-        name: description
-        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
-        required: true
-        example: 'Asperiores et optio iure nisi consectetur molestiae minima rem.'
+        example: crosyqybmbgcxrxvlwteybvzrdych
         type: string
         custom: []
-      amount:
-        name: amount
-        description: ''
-        required: true
-        example: 1200
-        type: int
-        custom: []
     cleanBodyParameters:
-      category_id: sit
-      description: 'Rerum quasi veniam voluptatibus dolor omnis tempore consequuntur inventore.'
-      amount: modi
+      name: crosyqybmbgcxrxvlwteybvzrdych
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "message": "Expense successfully stored.",
+           "message": "Category successfully stored.",
           }
         headers: []
         description: ''
@@ -213,7 +159,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z3gaPVDh6k64b1E8df5avce'
+      - 'Bearer baVePk853ga61DZfEv6c4hd'
     controller: null
     method: null
     route: null
@@ -221,15 +167,15 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/expenses/{id}'
+    uri: 'api/categories/{id}'
     metadata:
-      groupName: 'Expense CRUD'
+      groupName: 'Category CRUD'
       groupDescription: |-
 
-        API endpoints for managing Expense CRUD operations
+        API endpoints for managing Category CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Show single expense.'
+      title: 'Show single category.'
       description: ''
       authenticated: true
       custom: []
@@ -240,32 +186,29 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the expense.'
+        description: 'The ID of the category.'
         required: true
-        example: 13
+        example: 1
         type: int
         custom: []
     cleanUrlParameters:
-      id: distinctio
+      id: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters:
-      expense: 7
+      category: 3
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-            "id": 2,
-            "user_id": 1,
-            "category_id": 2,
-            "description": "Test description...",
-            "amount": "4893.00",
-            "created_at": "2023-06-15T12:03:40.000000Z",
-            "updated_at": null
-           }
+           "id": 1,
+           "name": "Food",
+           "created_at": null,
+           "updated_at": null
+          }
         headers: []
         description: ''
         custom: []
@@ -273,7 +216,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Eg8acPk6453h1bZaeVD6fdv'
+      - 'Bearer vV31P6Dhk8aa4bZfg5e6cdE'
     controller: null
     method: null
     route: null
@@ -282,15 +225,15 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/expenses/{id}'
+    uri: 'api/categories/{id}'
     metadata:
-      groupName: 'Expense CRUD'
+      groupName: 'Category CRUD'
       groupDescription: |-
 
-        API endpoints for managing Expense CRUD operations
+        API endpoints for managing Category CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update an expense.'
+      title: 'Update a category.'
       description: ''
       authenticated: true
       custom: []
@@ -301,9 +244,9 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the expense.'
+        description: 'The ID of the category.'
         required: true
-        example: 15
+        example: 1
         type: int
         custom: []
     cleanUrlParameters:
@@ -311,30 +254,23 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      category_id:
-        name: category_id
-        description: ''
-        required: false
-        example: 1
-        type: int
-        custom: []
-      description:
-        name: description
-        description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
-        required: false
-        example: 'Doloribus accusamus tempora dignissimos autem commodi sint.'
+      name:
+        name: name
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: test
         type: string
         custom: []
     cleanBodyParameters:
-      expense: 3
-      description: 'Voluptate earum numquam consequatur earum aut sunt cum aut.'
+      category: 18
+      name: uerkkjmywuxmhgyuvulmcwzpgmyrttvniqrpsgbklektzmfmjcfceyzuzemwlgnecdlpdpyhnnveweetsmgxmst
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "message": "Expense successfully updated.",
+           "message": "Category successfully updated.",
           }
         headers: []
         description: ''
@@ -343,7 +279,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer b56ZV6e1ag8aP4fh3ckDEvd'
+      - 'Bearer E3e156ghZDva6cPdVfa4bk8'
     controller: null
     method: null
     route: null
@@ -351,15 +287,15 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/expenses/{id}'
+    uri: 'api/categories/{id}'
     metadata:
-      groupName: 'Expense CRUD'
+      groupName: 'Category CRUD'
       groupDescription: |-
 
-        API endpoints for managing Expense CRUD operations
+        API endpoints for managing Category CRUD operations
       subgroup: ''
       subgroupDescription: ''
-      title: 'Delete an expense.'
+      title: 'Delete a category.'
       description: ''
       authenticated: true
       custom: []
@@ -370,25 +306,25 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the expense.'
+        description: 'The ID of the category.'
         required: true
         example: 1
         type: int
         custom: []
     cleanUrlParameters:
-      id: illum
+      id: ratione
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters:
-      expense: 16
+      category: 6
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-           "message": "Expense successfully deleted.",
+           "message": "Category successfully deleted.",
           }
         headers: []
         description: ''
@@ -397,61 +333,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vVh13PEd64Zb6gac8D5kaef'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/expenses/aggregate/{term}'
-    metadata:
-      groupName: 'Expense CRUD'
-      groupDescription: |-
-
-        API endpoints for managing Expense CRUD operations
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get aggregate expenses.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {ACCESS_TOKEN}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      term:
-        name: term
-        description: ''
-        required: true
-        example: 'last_month, last_quarter, last_year, or this_year'
-        type: string
-        custom: []
-    cleanUrlParameters:
-      term: voluptate
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters:
-      term: last_quarter
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-           "34602.00",
-          }
-        headers: []
-        description: ''
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6VD8dc6ZhEe1gPvb3ak4af5'
+      - 'Bearer 61e5bag3PvckDZE4d8hf6Va'
     controller: null
     method: null
     route: null
