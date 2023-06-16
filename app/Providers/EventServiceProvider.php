@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\BillDeleted;
 use App\Events\ExpenseCreated;
 use App\Events\ExpenseDeleted;
 use App\Listeners\IncreaseUserTotalAmount;
 use App\Listeners\DecreaseUserTotalAmount;
+use App\Listeners\RevertCalculationUserTotalAmount;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -26,6 +28,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         ExpenseDeleted::class => [
             IncreaseUserTotalAmount::class,
+        ],
+        BillDeleted::class => [
+            RevertCalculationUserTotalAmount::class,
         ],
     ];
 

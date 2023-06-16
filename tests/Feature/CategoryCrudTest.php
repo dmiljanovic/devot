@@ -4,11 +4,13 @@ namespace Tests\Feature;
 
 use App\Models\Category;
 use App\Models\User;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CategoryCrudTest extends TestCase
 {
+    use DatabaseTransactions;
     use DatabaseMigrations;
 
     private Category $category;

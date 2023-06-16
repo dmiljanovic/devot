@@ -22,7 +22,7 @@ class Expense extends Model
     ];
 
     /**
-     * Get the user that owns the comment.
+     * Get the user that owns the expense.
      */
     public function user(): BelongsTo
     {
@@ -30,10 +30,18 @@ class Expense extends Model
     }
 
     /**
-     * Get the category that owns the comment.
+     * Get the category that owns the expense.
      */
     public function category(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the bill that owns the expense.
+     */
+    public function bill(): BelongsTo
+    {
+        return $this->belongsTo(Bill::class);
     }
 }

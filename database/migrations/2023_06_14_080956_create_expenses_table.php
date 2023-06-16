@@ -25,6 +25,11 @@ return new class extends Migration
                 ->references('id')
                 ->on('categories')
                 ->onDelete('set null');
+            $table->unsignedBigInteger('bill_id');
+            $table->foreign('bill_id')
+                ->references('id')
+                ->on('bills')
+                ->onDelete('cascade');
             $table->string('description', 256);
             $table->decimal('amount');
             $table->timestamps();

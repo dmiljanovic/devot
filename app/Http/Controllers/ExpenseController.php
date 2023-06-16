@@ -142,7 +142,7 @@ class ExpenseController extends Controller
 
         DB::commit();
 
-        return response()->json('Expense successfully stored.');
+        return response()->json(['message' => 'Expense successfully stored.', 'expense' => $expense]);
     }
 
     /**

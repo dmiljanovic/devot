@@ -10,9 +10,16 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class ExpenseRepository implements CrudInterface
 {
+    private BillRepository $billRepository;
+
+    public function __construct(BillRepository $billRepository)
+    {
+        $this->billRepository = $billRepository;
+    }
+
     public function getAllWithPagination(Request $request): LengthAwarePaginator
     {
-        $query = Expense::query();
+        $query = Expense::query()->where('user_id', $request->user()->id);
 
         if ($request->has('category')) {
             $query->where('category_id', $request->get('category'));
@@ -35,7 +42,20 @@ class ExpenseRepository implements CrudInterface
 
     public function store(array $data): Expense
     {
-        return Expense::create($data);
+        if (! isset($data['bill_id'])) {
+            $bill = $this->billRepository->store();
+            $data['bill_id'] = $bill->id;
+        }
+
+        $expense = new Expense();
+        $expense->user_id = $data['user_id'];
+        $expense->category_id = $data['category_id'];
+        $expense->bill_id = $data['bill_id'];
+        $expense->description = $data['description'];
+        $expense->amount = $data['amount'];
+        $expense->save();
+
+        return $expense;
     }
 
     public function getById(int $id): ?Expense
