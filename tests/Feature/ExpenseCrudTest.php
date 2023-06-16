@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Bill;
 use App\Models\Category;
 use App\Models\Expense;
 use App\Models\User;
@@ -21,9 +22,15 @@ class ExpenseCrudTest extends TestCase
 
         $user = User::factory()->create();
         $this->actingAs($user);
+        $bill = Bill::factory()
+            ->for($user)
+            ->create();
+        $category = Category::factory()->create();
+
         $this->expense = Expense::factory()
-            ->for(User::factory()->create())
-            ->for(Category::factory()->create())
+            ->for($user)
+            ->for($category)
+            ->for($bill)
             ->create();
     }
 

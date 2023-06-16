@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Expense extends Model
 {
@@ -41,8 +40,8 @@ class Expense extends Model
     /**
      * Get the bill that owns the expense.
      */
-    public function bill(): BelongsToMany
+    public function bill(): BelongsTo
     {
-        return $this->belongsToMany(Bill::class);
+        return $this->belongsTo(Bill::class);
     }
 }
