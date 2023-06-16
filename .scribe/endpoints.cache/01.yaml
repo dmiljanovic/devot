@@ -31,7 +31,7 @@ endpoints:
         name: category
         description: 'Filter by ID of a category. Example 1.'
         required: false
-        example: 6
+        example: 11
         type: integer
         custom: []
       price_min:
@@ -63,7 +63,7 @@ endpoints:
         type: string
         custom: []
     cleanQueryParameters:
-      category: 6
+      category: 11
       price_min: 100
       price_max: 200
       date_from: 20-5-2023
@@ -146,7 +146,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a86dDgEZka56cV34fev1Phb'
+      - 'Bearer hb65kcEZg6adfPDVev34a81'
     controller: null
     method: null
     route: null
@@ -179,27 +179,27 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: voluptas
-        type: string
+        example: 12
+        type: int
         custom: []
       description:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: true
-        example: 'Ex autem quos ducimus ducimus facilis.'
+        example: 'Asperiores et optio iure nisi consectetur molestiae minima rem.'
         type: string
         custom: []
       amount:
         name: amount
         description: ''
         required: true
-        example: dicta
-        type: string
+        example: 1200
+        type: int
         custom: []
     cleanBodyParameters:
-      category_id: voluptas
-      description: 'Ex autem quos ducimus ducimus facilis.'
-      amount: dicta
+      category_id: sit
+      description: 'Rerum quasi veniam voluptatibus dolor omnis tempore consequuntur inventore.'
+      amount: modi
     fileParameters: []
     responses:
       -
@@ -215,7 +215,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 354haPv6Zd8efDEg6b1ckVa'
+      - 'Bearer Z3gaPVDh6k64b1E8df5avce'
     controller: null
     method: null
     route: null
@@ -244,23 +244,16 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: ea
-        type: string
+        example: 13
+        type: int
         custom: []
     cleanUrlParameters:
-      id: ea
+      id: distinctio
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      expense:
-        name: expense
-        description: ''
-        required: true
-        example: 13
-        type: integer
-        custom: []
+    bodyParameters: []
     cleanBodyParameters:
-      expense: 13
+      expense: 7
     fileParameters: []
     responses:
       -
@@ -282,7 +275,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 81fEdve6DPh6ZaVg3a5bkc4'
+      - 'Bearer Eg8acPk6453h1bZaeVD6fdv'
     controller: null
     method: null
     route: null
@@ -312,38 +305,31 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: impedit
-        type: string
+        example: 15
+        type: int
         custom: []
     cleanUrlParameters:
-      id: impedit
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      expense:
-        name: expense
-        description: ''
-        required: true
-        example: 5
-        type: integer
-        custom: []
       category_id:
         name: category_id
         description: ''
         required: false
-        example: null
-        type: string
+        example: 1
+        type: int
         custom: []
       description:
         name: description
         description: 'Must be at least 8 characters. Must not be greater than 256 characters.'
         required: false
-        example: 'Et animi officia natus fuga aut ut.'
+        example: 'Doloribus accusamus tempora dignissimos autem commodi sint.'
         type: string
         custom: []
     cleanBodyParameters:
-      expense: 5
-      description: 'Et animi officia natus fuga aut ut.'
+      expense: 3
+      description: 'Voluptate earum numquam consequatur earum aut sunt cum aut.'
     fileParameters: []
     responses:
       -
@@ -359,7 +345,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aZ6afD8g6PdbchV14ke3v5E'
+      - 'Bearer b56ZV6e1ag8aP4fh3ckDEvd'
     controller: null
     method: null
     route: null
@@ -388,23 +374,16 @@ endpoints:
         name: id
         description: 'The ID of the expense.'
         required: true
-        example: quam
-        type: string
+        example: 1
+        type: int
         custom: []
     cleanUrlParameters:
-      id: quam
+      id: illum
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      expense:
-        name: expense
-        description: ''
-        required: true
-        example: 15
-        type: integer
-        custom: []
+    bodyParameters: []
     cleanBodyParameters:
-      expense: 15
+      expense: 16
     fileParameters: []
     responses:
       -
@@ -420,7 +399,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z6vbde4D3cgPkfV1h56Eaa8'
+      - 'Bearer vVh13PEd64Zb6gac8D5kaef'
     controller: null
     method: null
     route: null
@@ -449,23 +428,16 @@ endpoints:
         name: term
         description: ''
         required: true
-        example: velit
+        example: 'last_month, last_quarter, last_year, or this_year'
         type: string
         custom: []
     cleanUrlParameters:
-      term: velit
+      term: voluptate
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      term:
-        name: term
-        description: 'Must be one of <code>last_month</code>, <code>last_quarter</code>, <code>last_year</code>, or <code>this_year</code>.'
-        required: true
-        example: last_year
-        type: string
-        custom: []
+    bodyParameters: []
     cleanBodyParameters:
-      term: last_year
+      term: last_quarter
     fileParameters: []
     responses:
       -
@@ -481,7 +453,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4c1Zh8PfvDeg6aE36da5bVk'
+      - 'Bearer 6VD8dc6ZhEe1gPvb3ak4af5'
     controller: null
     method: null
     route: null

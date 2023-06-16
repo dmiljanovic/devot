@@ -24,11 +24,11 @@ endpoints:
         name: fallbackPlaceholder
         description: ''
         required: true
-        example: k
+        example: 4/T=
         type: string
         custom: []
     cleanUrlParameters:
-      fallbackPlaceholder: k
+      fallbackPlaceholder: 4/T=
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -42,7 +42,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
         custom: []
